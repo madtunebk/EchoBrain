@@ -1,43 +1,57 @@
-# EchoBrain: EchoTracker, DataBridge & Companion
+# EchoBrain: wow_bridge, EchoTracker, DataBridge & Companion
 
 Components for automating and analyzing the "Echo" perk-draft system on a
 World of Warcraft 3.3.5a private server (Project Ebonhold):
 
 | Component | What it is | Runs |
 |---|---|---|
+| **wow_bridge** | Rust MITM proxy. Sits between the WoW client and the real server, relaying the login handshake and giving addons an HTTP control-plane API. | On your PC, as a separate process |
 | **EchoTracker** | WoW addon. Reads the live Echo board/character state and reports it. | Inside the WoW client |
 | **DataBridge** | WoW addon. Generic transport - batches/whispers any addon's data out, runs Lua sent back in. | Inside the WoW client |
 | **companion** | Rust CLI. Scores boards, decides Take/Reroll/Banish/Freeze, records training data, executes actions. | On your PC, as a separate process |
 | **FlaskGUI** *(optional)* | Python web dashboard. Live board/reasoning/charges view plus a full run-history browser, reading the same bridge feed and `companion`'s training database. | On your PC, in a browser |
 
+**Source only - no prebuilt binaries are published or should be trusted.**
+`wow_bridge` sits in the middle of your login traffic; the only responsible
+way to run something like that is to build it yourself from the Rust source
+above, so you (or anyone) can read every line first. See
+[Building](#building) below.
+
 ## How they fit together
 
 ```
- WoW client                              Your PC
-┌─────────────────────────┐   addon    ┌──────────────┐   HTTP    ┌───────────┐
-│ EchoTracker (reports)    │  message   │  a local     │  (local)  │ companion │
-│ DataBridge  (transport) ─┼───whisper──┤  bridge      ├───────────┤  (Rust)   │
-└─────────────────────────┘            │  process     │           └───────────┘
-                                        │              │   HTTP    ┌───────────┐
-                                        │              ├───────────┤ FlaskGUI  │
-                                        └──────────────┘  (local)  │ (optional)│
-                                                                   └───────────┘
+              Your PC                                    Your PC
+┌─────────────┐  TCP   ┌─────────────┐  addon   ┌──────────────┐   HTTP    ┌───────────┐
+│  real WoW    │◄──────►│  wow_bridge  │◄message──┤ EchoTracker/ │           │ companion │
+│  client      │        │  (Rust MITM) │  whisper │ DataBridge   │           │  (Rust)   │
+└─────────────┘        └──────┬───────┘  (in-game)└──────────────┘           └─────┬─────┘
+                               │ HTTP :8765                                        │
+                               └────────────────────────────────────────────────────┤
+                               │ HTTP :8765                                  HTTP   │
+                               └──────────────────────────────────┬─────────────────┘
+                                                              ┌────┴──────┐
+                                                              │ FlaskGUI  │
+                                                              │ (optional)│
+                                                              └───────────┘
 ```
 
-FlaskGUI is just another client of the same local bridge API `companion`
-uses (`/api/stream` for the live feed, `/api/cmd/lua` for its Gear Watchdog
-controls) plus a read-only connection to `companion`'s own
-`data/session.db`. It has no effect on scoring or decisions either way -
-purely a viewer.
+`wow_bridge` relays your real login/world traffic byte-for-byte to the real
+server (`realmlist.wtf` points at `127.0.0.1` instead of the real server;
+`wow_bridge` forwards everything on to the real address hardcoded in
+`wow_bridge/src/auth.rs`) and separately exposes a local HTTP API on
+`http://127.0.0.1:8765` that `companion` and FlaskGUI both talk to.
+EchoTracker/DataBridge talk to `wow_bridge` from *inside* the game via
+addon-message whispers, not HTTP - `wow_bridge` is the only piece that
+bridges those two transports.
 
-**Important: the bridge process itself is not included in this release.**
-EchoTracker and DataBridge talk to the game via addon-message whispers;
-`companion` talks over a local HTTP API on `http://127.0.0.1:8765`. Something
-has to sit in the middle relaying between those two transports - in the
-original project that's a small Rust proxy (`wow_bridge`) that also handles
-the WoW login handshake. It isn't part of this release. To use `companion`
-and these addons, you need a bridge process that implements the API
-`companion` expects:
+**wow_bridge never touches your account password or SRP6 private values**
+(see `wow_bridge/src/common.rs`'s comments) - the API's bearer token is
+pure OS randomness, only *triggered* (not derived from anything
+login-related) on each successful auth. Read `wow_bridge/src/auth.rs` and
+`api.rs` yourself before trusting this claim; that's the whole point of
+shipping source only.
+
+### The local HTTP API (`wow_bridge/src/api.rs`)
 
 - `GET  /api/variables/{key}` - read a cached value
 - `POST /api/variables/{key}` - queue a value for delivery into the game
@@ -50,21 +64,26 @@ and these addons, you need a bridge process that implements the API
 - `GET  /api/stream` - Server-Sent Events feed of every `key=value` DataBridge
   reports, for anything that wants to watch the data live instead of polling
 
-Every request needs `Authorization: Bearer <token>` - see
-`companion/src/bridge.rs`'s `current_token()` for how `companion` expects to
-find the token file (`api_token.txt` next to its own executable). On the
-addon side, `DataBridge.lua`'s wire format is `DATA|k1=v1<0x1D>k2=v2...`
-(0x1D = ASCII Group Separator) sent as an addon-message whisper to yourself,
-and `SET|...` in the same format for values pushed back into the game. See
-`DataBridge.lua`'s own comments for the exact framing.
+Every request needs `Authorization: Bearer <token>` - `wow_bridge` writes
+the current one to `api_token.txt` next to its own executable (rotating it
+on every startup and every successful login); `companion`/FlaskGUI both
+read that same file. On the addon side, `DataBridge.lua`'s wire format is
+`DATA|k1=v1<0x1D>k2=v2...` (0x1D = ASCII Group Separator) sent as an
+addon-message whisper to yourself, and `SET|...` in the same format for
+values pushed back into the game - see `DataBridge.lua`'s own comments for
+the exact framing.
+
+FlaskGUI is just another client of the same API (`/api/stream` for the live
+feed, `/api/cmd/lua` for its Gear Watchdog controls) plus a read-only
+connection to `companion`'s own `data/session.db`. It has no effect on
+scoring or decisions either way - purely a viewer.
 
 ## Requirements
 
 - WoW 3.3.5a client, playing on a server with the `ProjectEbonhold` Echo/perk
   system (the addons and `companion`'s scoring both assume its specific
   API/perk data - see [Data files](#data-files) below)
-- Rust toolchain (stable) to build `companion`
-- A bridge process implementing the API above (not included - see above)
+- Rust toolchain (stable) to build `wow_bridge` and `companion`
 - Python 3, stdlib only, for the `tools/export/` scripts; Python 3 +
   `pip install -r FlaskGUI/requirements.txt` (Flask, flask-sock,
   simple-websocket) only if you want the optional dashboard
@@ -82,21 +101,39 @@ Both are enabled from the in-game AddOns list at the character-select
 screen, same as any other addon. EchoTracker declares `DataBridge` as an
 optional dependency in its `.toc`, so load order takes care of itself.
 
-## Building companion
+## Building
+
+Both are independent Cargo packages - build each from its own folder:
 
 ```bash
-cd companion
-cargo build --release
-# binary at target/release/companion
+cd wow_bridge && cargo build --release   # binary at target/release/wow_bridge
+cd ../companion && cargo build --release # binary at target/release/companion
 ```
 
-Run it from a directory containing a `data/` folder (see below) - it
-resolves `data/perk_catalog.json` etc. as plain relative paths from the
-current working directory, not from its own executable location. The
-simplest layout is to run it from this release's root:
+Put both built binaries in one folder of your choice (not tracked by git -
+see `.gitignore`) so `api_token.txt` (written by `wow_bridge` next to its
+own executable) is where `companion`/FlaskGUI both expect to find it:
 
 ```bash
-./companion/target/release/companion score --spec dps
+mkdir -p bins
+cp wow_bridge/target/release/wow_bridge companion/target/release/companion bins/
+```
+
+Point your WoW client's `realmlist.wtf` at `127.0.0.1`, then run
+`wow_bridge` first (it needs to be up before you log in) and log in
+normally:
+
+```bash
+./bins/wow_bridge
+```
+
+`companion` resolves `data/perk_catalog.json` etc. as plain relative paths
+from the current working directory, not its own executable's location - run
+it from this release's root (or copy `data/` alongside wherever you put
+`bins/`):
+
+```bash
+./bins/companion score --spec dps
 ```
 
 ## Running FlaskGUI (optional)
@@ -185,9 +222,6 @@ EchoTracker/DataBridge slash command.
 
 ## What's *not* in this release
 
-- **The bridge process** (`wow_bridge` in the original project) - see
-  [How they fit together](#how-they-fit-together). `companion` and these
-  two addons need one; it isn't included.
 - **The AI training tool** (`aimodel`) - the trained PALADIN/dps ensemble
   itself IS included (`data/ai_ensemble/`, see [Data files](#data-files)),
   but the Candle-based Rust tool that trained it, and the `data/session.db`
