@@ -18,12 +18,13 @@ companion score-mode <normal|ai|status> [--api URL]
 ```
 Live switch between pure heuristic scoring ("normal", the default) and
 heuristic scoring blended with a trained ensemble's prediction ("ai" - see
-`src/ai.rs`/`src/scoring.rs`'s `AiContext`/`AI_WEIGHT`). **Training the
-ensemble itself is a separate tool not included in this release** - `ai.rs`
-expects one under `data/ai_ensemble/member_1/`, `member_2/`, etc. (each a
-`metadata.json` + `model.safetensors` pair; see `ai.rs`'s doc comment for
-the exact format). Without one, `ai` mode silently behaves exactly like
-"normal" - `score_card()` never fails or errors over a missing ensemble.
+`src/ai.rs`/`src/scoring.rs`'s `AiContext`/`AI_WEIGHT`). The ensemble itself
+lives under `data/ai_ensemble/member_1/`, `member_2/`, etc. (each a
+`metadata.json` + `model.safetensors` pair) - a pre-trained PALADIN/dps one
+ships with this release; train your own or extend it to another class/spec
+with `aimodel` (also included - see `aimodel/README.md`). Without an
+ensemble present, `ai` mode silently behaves exactly like "normal" -
+`score_card()` never fails or errors over a missing ensemble.
 `auto` reads this every cycle, same as `echo-auto` - no restart needed
 either way. Also settable once at `auto` startup via `--score-mode
 <normal|ai>`.

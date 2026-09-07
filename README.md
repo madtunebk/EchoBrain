@@ -10,6 +10,7 @@ World of Warcraft 3.3.5a private server (Project Ebonhold):
 | **DataBridge** | WoW addon. Generic transport - batches/whispers any addon's data out, runs Lua sent back in. | Inside the WoW client |
 | **companion** | Rust CLI. Scores boards, decides Take/Reroll/Banish/Freeze, records training data, executes actions. | On your PC, as a separate process |
 | **FlaskGUI** *(optional)* | Python web dashboard. Live board/reasoning/charges view plus a full run-history browser, reading the same bridge feed and `companion`'s training database. | On your PC, in a browser |
+| **aimodel** *(optional)* | Rust/Candle training tool. Trains the small value-model ensemble `companion score-mode ai` can blend into scoring. | On your PC, one-off training runs |
 
 **Source only - no prebuilt binaries are published or should be trusted.**
 `wow_bridge` sits in the middle of your login traffic; the only responsible
@@ -103,11 +104,13 @@ optional dependency in its `.toc`, so load order takes care of itself.
 
 ## Building
 
-Both are independent Cargo packages - build each from its own folder:
+`wow_bridge`, `companion`, and `aimodel` are three independent Cargo
+packages - build each from its own folder:
 
 ```bash
 cd wow_bridge && cargo build --release   # binary at target/release/wow_bridge
 cd ../companion && cargo build --release # binary at target/release/companion
+cd ../aimodel && cargo build --release   # binary at target/release/aimodel (optional - see aimodel/README.md)
 ```
 
 Put both built binaries in one folder of your choice (not tracked by git -
@@ -170,14 +173,19 @@ degrades gracefully if missing or incomplete.
 `companion/src/ai.rs`) for **PALADIN/dps only** - `companion score-mode ai`
 blends its prediction into the heuristic score. It was trained on a small,
 personal dataset (a few hundred confirmed picks from one player's actual
-runs), so treat it as a experimental nudge on top of the heuristic, not a
+runs), so treat it as an experimental nudge on top of the heuristic, not a
 verified oracle - see `companion/commands.md`'s `score-mode` entry for how
 the blend actually works and how conservatively it's weighted. Any other
 class/spec silently scores as pure "normal" regardless of this setting,
-since the ensemble has never seen one. Retraining or extending it to other
-classes needs `aimodel`, the Candle-based training tool - not included in
-this release; `data/ai_ensemble/`'s `metadata.json` files document the
-exact feature/schema format it expects if you want to build your own.
+since the ensemble has never seen one.
+
+`aimodel/` is the Candle-based Rust tool that trained it (also included -
+see `aimodel/README.md`). It needs a `data/session.db` to train against,
+which this release does **not** ship (real per-player gameplay history) -
+`companion auto` builds one from scratch as you play. Retrain the
+PALADIN/dps ensemble on your own data, or point it at a different
+`--class`/`--spec` to extend coverage to another class - see
+`aimodel/README.md`'s `train-ensemble` docs.
 
 `data/decide_config.example.json` shows every tunable in `companion`'s
 decision engine (per-level-bracket take thresholds, banish cutoff, freeze
@@ -222,12 +230,6 @@ EchoTracker/DataBridge slash command.
 
 ## What's *not* in this release
 
-- **The AI training tool** (`aimodel`) - the trained PALADIN/dps ensemble
-  itself IS included (`data/ai_ensemble/`, see [Data files](#data-files)),
-  but the Candle-based Rust tool that trained it, and the `data/session.db`
-  training data it trained on, are not. Bring your own trainer (the
-  `metadata.json` files document the exact feature schema) if you want to
-  retrain it or extend it to another class/spec.
 - **WhitelistLiquidator** - `companion`'s `wl` subcommand and the
   `wl_*` bridge keys it reads exist for a separate bag-management addon
   that isn't part of this release. Those commands simply return empty/no-op
