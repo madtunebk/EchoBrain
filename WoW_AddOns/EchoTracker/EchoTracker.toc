@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: Echo Tracker
+## Notes: Read-only reporter for the Echo/perk draft. Reports through DataBridge if it's loaded.
+## Version: 0.1.0
+## OptionalDeps: DataBridge, ProjectEbonhold
+## SavedVariables: EchoTrackerDB
+
+EchoTracker.lua
+Bindings.xml

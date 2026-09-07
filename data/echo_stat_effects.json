@@ -1,0 +1,4977 @@
+{
+  "200000": {
+    "benefits": [
+      "Increases Strength by 26."
+    ],
+    "description": "Increases Strength by 26.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "strength"
+    ]
+  },
+  "200001": {
+    "benefits": [
+      "Increases Agility by 26."
+    ],
+    "description": "Increases Agility by 26.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "agility"
+    ]
+  },
+  "200002": {
+    "benefits": [
+      "Increases Intellect by 26."
+    ],
+    "description": "Increases Intellect by 26.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "intellect"
+    ]
+  },
+  "200003": {
+    "benefits": [
+      "Increases Spirit by 26."
+    ],
+    "description": "Increases Spirit by 26.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spirit"
+    ]
+  },
+  "200004": {
+    "benefits": [
+      "Increases Stamina by 26."
+    ],
+    "description": "Increases Stamina by 26.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "stamina"
+    ]
+  },
+  "200005": {
+    "benefits": [
+      "Increases mount speed by an"
+    ],
+    "description": "Increases mount speed by an additional 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200006": {
+    "benefits": [],
+    "description": "Restores 26 mana every 5 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200007": {
+    "benefits": [
+      "Increases block value by 78."
+    ],
+    "description": "Increases block value by 78.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200008": {
+    "benefits": [
+      "Increases spell power by 52."
+    ],
+    "description": "Increases spell power by 52.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200009": {
+    "benefits": [
+      "Increases attack power by 78."
+    ],
+    "description": "Increases attack power by 78.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200010": {
+    "benefits": [],
+    "description": "After standing still for 2 sec, your armor is increased by 520 for 5 sec after you move.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200016": {
+    "benefits": [],
+    "description": "Restores 31.2 health every 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200017": {
+    "benefits": [
+      "Increases armor by 208."
+    ],
+    "description": "Increases armor by 208.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200018": {
+    "benefits": [
+      "Reduces all damage taken by 6."
+    ],
+    "description": "Reduces all damage taken by 6.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200019": {
+    "benefits": [
+      "Increases movement speed by an"
+    ],
+    "description": "Increases your movement speed by an additional 5%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200020": {
+    "benefits": [],
+    "description": "Every 5 melee attacks and abilities grants 1% attack speed for 10 sec. Stacks up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200022": {
+    "benefits": [],
+    "description": "Your first hit after entering combat roots the target for 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200025": {
+    "benefits": [],
+    "description": "When struck, you have a 10% chance to freeze the attacker for 3 sec seconds.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200027": {
+    "benefits": [],
+    "description": "When struck, your movement speed is increased by an additional 20% for 5 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200029": {
+    "benefits": [],
+    "description": "While in combat, you deal 205.65 Fire damage to enemies within 8 yards every 2 seconds. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200031": {
+    "benefits": [],
+    "description": "Taking direct damage inflict 372.42 Nature damage back to enemies. Damage scales with your Armor and deals at least 5 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200033": {
+    "benefits": [],
+    "description": "Your direct healing spells also dispel one harmful Magic effect from the target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200035": {
+    "benefits": [
+      "Increases maximum health by 175."
+    ],
+    "description": "Increases your maximum health by 175.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200036": {
+    "benefits": [
+      "Increases Fire Resistance by 5."
+    ],
+    "description": "Increases Fire Resistance by 5.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200037": {
+    "benefits": [
+      "Increases Frost Resistance by 5."
+    ],
+    "description": "Increases Frost Resistance by 5.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200038": {
+    "benefits": [
+      "Increases Nature Resistance by 5."
+    ],
+    "description": "Increases Nature Resistance by 5.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200039": {
+    "benefits": [
+      "Increases Arcane Resistance by 5."
+    ],
+    "description": "Increases Arcane Resistance by 5.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200040": {
+    "benefits": [
+      "Increases Shadow Resistance by 5."
+    ],
+    "description": "Increases Shadow Resistance by 5.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200041": {
+    "benefits": [
+      "Increases healing received by 1%"
+    ],
+    "description": "Increases healing received by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200042": {
+    "benefits": [],
+    "description": "Your critical strikes have a 20% chance to deal 329.42 Physical damage to the target. Proc chance tripled against target under 35% health. This effect deals at least 20 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200044": {
+    "benefits": [],
+    "description": "Every 10 sec, your critical strike chance is increased by 100% for 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200046": {
+    "benefits": [],
+    "description": "Your direct healing spells have a 5% chance to leave a heal over time effect on the target, healing for 10% of the amount healed over 3 sec seconds. This effect can stack up to 30% of the target���s maximum health.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200048": {
+    "benefits": [],
+    "description": "Your direct damaging spells have a 10% chance to burn the target for damage equal to 10% of the damage done over 3 sec. This effect can stack up to 30% of your maximum health.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200050": {
+    "benefits": [],
+    "description": "After you hit a target with 4 spells or abilities within 5 seconds, damage you deal to that target is increased by 15% for 8 sec. This effect cannot occur more than once every 30 seconds per target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200052": {
+    "benefits": [],
+    "description": "When you take damage that leaves you below 30% health, you are affected by a random heal-over-time spell from another class. This effect cannot occur more than once every 30 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200063": {
+    "benefits": [],
+    "description": "When you deal damage, you have a chance to unleash a random offensive spell from another class on your target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200200": {
+    "benefits": [],
+    "description": "Healing an ally triggers a burst of Holy energy at their location, dealing 514 Holy damage to nearby enemies. This effect deals at least 10 damage. This effect cannot occur more than once every 6 seconds per target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200202": {
+    "benefits": [],
+    "description": "While out of combat, damage and healing done is increased by 100%. This effect persists for 3 sec after you enter combat.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200205": {
+    "benefits": [],
+    "description": "After you cast 3 Fire spells or abilities, you call down a Rain of Fire at the target’s location, scorching the ground for 12853 Fire damage over 6.45 sec. This effect cannot occur more than once every 21 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200209": {
+    "benefits": [],
+    "description": "After you cast 3 Frost spells or abilities, you summon a Blizzard at the target’s location, dealing 10283 Frost damage over 6.45 sec and slowing enemies within the area. This effect cannot occur more than once every 21 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200213": {
+    "benefits": [],
+    "description": "After you cast 3 Arcane spells or abilities, you unleash an Arcane Explosion, dealing 5655 Arcane damage and restoring 5% mana. This effect cannot occur more than once every 21 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200216": {
+    "benefits": [],
+    "description": "After you cast 3 Nature spells or abilities, you summon a Hurricane at the target’s location, dealing 10283 Nature damage over 6.45 sec and increasing affected enemies’ attack intervals by 20%. This effect cannot occur more than once every 21 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200220": {
+    "benefits": [],
+    "description": "After you cast 3 Holy spells or abilities, a Consecration forms beneath the target, dealing 10283 Holy damage to enemies and healing allies standing in the light for 18180 over 8 sec. This effect cannot occur more than once every 21 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200224": {
+    "benefits": [],
+    "description": "After you cast 3 Shadow spells or abilities, you unleash a Shadowfury at the target’s location, dealing 5655 Shadow damage and stunning enemies within the area for 3 sec. This effect cannot occur more than once every 21 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200227": {
+    "benefits": [],
+    "description": "You deal 20% additional damage to enemies affected by crowd control.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200228": {
+    "benefits": [
+      "Increases haste rating by 20."
+    ],
+    "description": "For each of your abilities on cooldown, Haste is increased by 2%. Also increases haste rating by 20.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "haste"
+    ]
+  },
+  "200230": {
+    "benefits": [
+      "Increases spell power and attack power by 40."
+    ],
+    "description": "You deal 1% increased damage to a target for each of your damage over time effects active on it. Also increases your spell power and attack power by 40.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power",
+      "spell_power"
+    ]
+  },
+  "200231": {
+    "benefits": [
+      "Increases critical strike rating by 40."
+    ],
+    "description": "While you are behind your target, your melee and ranged attacks and abilities also trigger an additional strike for 5% of the damage dealt. Also increases critical strike rating by 40.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200232": {
+    "benefits": [
+      "Increases spell power and attack power by 40."
+    ],
+    "description": "After you cast or use 10 offensive abilities, you unleashe a Chain Lightning, dealing 17994 Nature damage and jumping to up to 99 additional enemies. Also increases your spell power and attack power by 40.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power",
+      "spell_power"
+    ]
+  },
+  "200234": {
+    "benefits": [
+      "Increases attack power by 60."
+    ],
+    "description": "Your melee attacks strike an additional nearby enemy. Also increases your attack power by 60.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200236": {
+    "benefits": [
+      "Increases Haste by 10%"
+    ],
+    "description": "Increases Haste by 10% and haste rating by 30.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "haste"
+    ]
+  },
+  "200237": {
+    "benefits": [
+      "Increases hit rating by 30."
+    ],
+    "description": "Whenever you use an ability with a cooldown, the remaining cooldown on all other abilities is reduced by 1.5 sec. Also increases hit rating by 30. This effect cannot occur more than once 1 second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "hit"
+    ]
+  },
+  "200238": {
+    "benefits": [],
+    "description": "Every 10 sec, your next ability costs no primary resource and restores 24 Energy, 12 Rage, 3% of your maximum mana, or 48 Runic Power, depending on your class.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200240": {
+    "benefits": [
+      "Increases critical strike rating by 40."
+    ],
+    "description": "After standing still for 6 sec, your critical strikes deal 25% increased damage. This effect persists for up to 3 sec after you move. Also increases your critical strike rating by 40.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200243": {
+    "benefits": [
+      "Increases spell power by 60."
+    ],
+    "description": "Your periodic healing effects also cause the target to erupt in burning flames, dealing Fire damage equal to 10% of the healing done to nearby enemies every 3 sec. This damage cannot exceed 20% of your maximum health. Also increases your spell power by 60.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200246": {
+    "benefits": [
+      "Increases maximum health by 400."
+    ],
+    "description": "Whenever you receive a direct heal, you deal Shadow damage equal to 15% of the amount healed to a nearby enemy. Also increases your maximum health by 400.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200248": {
+    "benefits": [],
+    "description": "After leaving combat, and every 20 sec while in combat, your next damaging ability also hits 1 additional nearby enemy.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200259": {
+    "benefits": [],
+    "description": "You have a 35% to cast the same ability twice. Only work with some healing and damaging class abilities.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200270": {
+    "benefits": [],
+    "description": "Whenever you deal damage over time, you have a 30% chance to echo 20% of that damage onto another enemy within 8 yards. Whenever you restore health over time, you have a 30% chance to echo 20% of that healing onto another ally within 30 yards.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200300": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Death Wish, Shield Wall, Retaliation, Last Stand, Enraged Regeneration, Shattering Throw, Recklessness, Bladestorm, Bloodrage, Intimidating Shout, and Challenging Shout abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200301": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Demonic Empowerment, Metamorphosis, Inferno, Ritual of Doom, Shadowfury, Death Coil, and Fel Domination abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200302": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Earthbind Totem, Earth Elemental Totem, Shamanistic Rage, Astral Recall, Feral Spirit, Fire Elemental Totem, Elemental Mastery, Thunderstorm, Stoneclaw Totem, and Hex abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200303": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Sprint, Adrenaline Rush, Blade Flurry, Preparation, Premeditation, Cold Blood, Killing Spree, Shadow Dance, Cloak of Shadows, and Evasion abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200304": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Fade, Guardian Spirit, Power Infusion, Pain Suppression, Dispersion, Lightwell, Fear Ward, Hymn of Hope, Shadowfiend, Silence, Desperate Prayer, Divine Hymn, and Psychic Horror abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200305": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Repentance, Lay on Hands, Hand of Protection, Avenging Wrath, Divine Shield, Divine Illumination, Divine Plea, Divine Protection, Aura Mastery, Divine Favor, Hand of Salvation, and Hand of Sacrifice abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200306": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Cold Snap, Combustion, Presence of Mind, Arcane Power, Mirror Image, Icy Veins, Evocation, Ice Block, and Invisibility abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200307": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Readiness, Bestial Wrath, Wyvern Sting, Intimidation, Deterrence, Kill Command, Rapid Fire, and Feign Death abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200308": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Berserk, Starfall, Barkskin, Challenging Roar, Enrage, Force of Nature, Frenzied Regeneration, Innervate, Nature’s Swiftness, Rebirth, Tranquility, Bash, Dash, and Nature’s Grasp abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200309": {
+    "benefits": [],
+    "description": "Reduces the cooldown of your Hysteria, Dancing Rune Weapon, Rune Tap, Hungering Cold, Lichborne, Bone Shield, Summon Gargoyle, Unbreakable Armor, Anti-Magic Zone, Blood Tap, Death Pact, Army of the Dead, Empower Rune Weapon, Icebound Fortitude, Mark of Blood, Raise Ally, Raise Dead, Deathchill, Strangulate, Vampiric Blood, and Anti-Magic Shell abilities by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200310": {
+    "benefits": [],
+    "description": "Generates 1 Rage every 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200313": {
+    "benefits": [],
+    "description": "Your Chains of Ice, Howling Blast, Icy Touch, Obliterate, Death Strike, Plague Strike, and Scourge Strike generate 2.5 additional runic power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200314": {
+    "benefits": [
+      "Increases Energy regeneration by 1%"
+    ],
+    "description": "Increases your Energy regeneration by 1%",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200400": {
+    "benefits": [],
+    "description": "Your direct Physical damage spells and abilities apply a stacking mark to the target for 8 sec, increasing the Physical damage you deal to that target by 20 per stack. Stacks up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200402": {
+    "benefits": [],
+    "description": "Your direct Holy damage spells and abilities apply a stacking mark to the target for 8 sec, increasing the Holy damage you deal to that target by 20 per stack. Stacks up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200404": {
+    "benefits": [],
+    "description": "Your direct Fire damage spells and abilities apply a stacking mark to the target for 8 sec, increasing the Fire damage you deal to that target by 20 per stack. Stacks up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200406": {
+    "benefits": [],
+    "description": "Your direct Nature damage spells and abilities apply a stacking mark to the target for 8 sec, increasing the Nature damage you deal to that target by 20 per stack. Stacks up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200408": {
+    "benefits": [],
+    "description": "Your direct Frost damage spells and abilities apply a stacking mark to the target for 8 sec, increasing the Frost damage you deal to that target by 20 per stack. Stacks up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200410": {
+    "benefits": [],
+    "description": "Your direct Shadow damage spells and abilities apply a stacking mark to the target for 8 sec, increasing the Shadow damage you deal to that target by 20 per stack. Stacks up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200412": {
+    "benefits": [],
+    "description": "Your direct Arcane damage spells and abilities apply a stacking mark to the target for 8 sec, increasing the Arcane damage you deal to that target by 20 per stack. Stacks up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200414": {
+    "benefits": [
+      "Increase armor by 13"
+    ],
+    "description": "Your melee attacks increase your armor by 13 for 8 sec. Stacks up to 10 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200416": {
+    "benefits": [],
+    "description": "Your Auto Shot has a 10% chance to fire an additional shot.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200418": {
+    "benefits": [],
+    "description": "When you fall below 25% health, your movement speed is greatly increased for a short time. This effect cannot occur more than once every 2 min.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200421": {
+    "benefits": [],
+    "description": "Your melee and ranged attacks wound the target, dealing 494.13 damage over 6 sec. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200423": {
+    "benefits": [],
+    "description": "Your Auto Shot slows the target by 30% for 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200425": {
+    "benefits": [],
+    "description": "Your melee auto-attacks cleave for 20% of the damage dealt to nearby enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200427": {
+    "benefits": [],
+    "description": "After you dodge or parry an attack, you deal 359.2 Physical damage to nearby enemies. Damage scales with your Stamina and deals at least 10 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200429": {
+    "benefits": [
+      "Increases hit rating by 17."
+    ],
+    "description": "Increases hit rating by 17.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "hit"
+    ]
+  },
+  "200430": {
+    "benefits": [
+      "Increases critical strike rating by 17."
+    ],
+    "description": "Increases critical strike rating by 17.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200431": {
+    "benefits": [
+      "Increases haste rating by 17."
+    ],
+    "description": "Increases haste rating by 17.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "haste"
+    ]
+  },
+  "200432": {
+    "benefits": [
+      "Increases armor penetration rating by 17."
+    ],
+    "description": "Increases armor penetration rating by 17.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "armor_pen"
+    ]
+  },
+  "200433": {
+    "benefits": [
+      "Increases expertise rating by 17."
+    ],
+    "description": "Increases expertise rating by 17.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "expertise"
+    ]
+  },
+  "200434": {
+    "benefits": [
+      "Increases maximum mana by 312."
+    ],
+    "description": "Increases maximum mana by 312.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200435": {
+    "benefits": [
+      "Increases all damage dealt by 13."
+    ],
+    "description": "Increases all damage dealt by 13.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200436": {
+    "benefits": [
+      "Reduces damage taken from area-of-effect attacks by 1%"
+    ],
+    "description": "Reduces damage taken from area-of-effect attacks by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200437": {
+    "benefits": [],
+    "description": "Reduces pushback suffered from damaging attacks while casting by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200438": {
+    "benefits": [
+      "Reduces threat generated by 2%"
+    ],
+    "description": "Reduces threat generated by 2%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200439": {
+    "benefits": [],
+    "description": "Increases threat generated by 3%.",
+    "downsides": [
+      "Increases threat generated by 3%"
+    ],
+    "explicit_tradeoff": false,
+    "has_downside": true,
+    "stats": []
+  },
+  "200440": {
+    "benefits": [
+      "Reduces the mana cost of your spells by 5%"
+    ],
+    "description": "Reduces the mana cost of your spells by 5%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200441": {
+    "benefits": [],
+    "description": "Increases your Armor contribution from cloth and leather items by 4%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200442": {
+    "benefits": [],
+    "description": "Allows 5% of your mana regeneration to continue while casting.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200443": {
+    "benefits": [],
+    "description": "When you fall below 50% health, damage taken is reduced by 15% for 6 sec. This effect cannot occur more than once every 45 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200446": {
+    "benefits": [],
+    "description": "Reduces the duration of movement slowing effects on you by 15%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200447": {
+    "benefits": [
+      "Reduces the duration of fear effects on you by 30%"
+    ],
+    "description": "Reduces the duration of fear effects on you by 30%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200448": {
+    "benefits": [
+      "Reduces the duration of disarm effects on you by 30%"
+    ],
+    "description": "Reduces the duration of disarm effects on you by 30%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200449": {
+    "benefits": [
+      "Reduces the duration of root effects on you by 30%"
+    ],
+    "description": "Reduces the duration of root effects on you by 30%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200450": {
+    "benefits": [
+      "Reduces the duration of stun effects on you by 30%"
+    ],
+    "description": "Reduces the duration of stun effects on you by 30%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200451": {
+    "benefits": [
+      "Increases Strength by 39."
+    ],
+    "description": "Increases Strength by 39.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "strength"
+    ]
+  },
+  "200452": {
+    "benefits": [
+      "Increases Agility by 39."
+    ],
+    "description": "Increases Agility by 39.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "agility"
+    ]
+  },
+  "200453": {
+    "benefits": [
+      "Increases Intellect by 39."
+    ],
+    "description": "Increases Intellect by 39.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "intellect"
+    ]
+  },
+  "200454": {
+    "benefits": [
+      "Increases Spirit by 39."
+    ],
+    "description": "Increases Spirit by 39.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spirit"
+    ]
+  },
+  "200455": {
+    "benefits": [
+      "Increases Stamina by 39."
+    ],
+    "description": "Increases Stamina by 39.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "stamina"
+    ]
+  },
+  "200456": {
+    "benefits": [
+      "Increases mount speed by an"
+    ],
+    "description": "Increases mount speed by an additional 15%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200457": {
+    "benefits": [],
+    "description": "Restores 39 mana every 5 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200458": {
+    "benefits": [
+      "Increases block value by 117."
+    ],
+    "description": "Increases block value by 117.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200459": {
+    "benefits": [
+      "Increases spell power by 78."
+    ],
+    "description": "Increases spell power by 78.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200460": {
+    "benefits": [
+      "Increases attack power by 117."
+    ],
+    "description": "Increases attack power by 117.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200461": {
+    "benefits": [],
+    "description": "After standing still for 2 sec, your armor is increased by 780 for 5 sec after you move.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200463": {
+    "benefits": [],
+    "description": "Restores 46.8 health every 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200464": {
+    "benefits": [
+      "Increases armor by 312."
+    ],
+    "description": "Increases armor by 312.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200465": {
+    "benefits": [
+      "Reduces all damage taken by 9."
+    ],
+    "description": "Reduces all damage taken by 9.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200466": {
+    "benefits": [
+      "Increases movement speed by an"
+    ],
+    "description": "Increases your movement speed by an additional 8%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200467": {
+    "benefits": [
+      "Increases Fire Resistance by 8."
+    ],
+    "description": "Increases Fire Resistance by 8.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200468": {
+    "benefits": [
+      "Increases Frost Resistance by 8."
+    ],
+    "description": "Increases Frost Resistance by 8.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200469": {
+    "benefits": [
+      "Increases Nature Resistance by 8."
+    ],
+    "description": "Increases Nature Resistance by 8.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200470": {
+    "benefits": [
+      "Increases Arcane Resistance by 8."
+    ],
+    "description": "Increases Arcane Resistance by 8.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200471": {
+    "benefits": [
+      "Increases Shadow Resistance by 8."
+    ],
+    "description": "Increases Shadow Resistance by 8.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200479": {
+    "benefits": [
+      "Increase armor by 20"
+    ],
+    "description": "Your melee attacks increase your armor by 20 for 8 sec. Stacks up to 10 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200480": {
+    "benefits": [
+      "Increases hit rating by 27.2."
+    ],
+    "description": "Increases hit rating by 27.2.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "hit"
+    ]
+  },
+  "200481": {
+    "benefits": [
+      "Increases critical strike rating by 27.2."
+    ],
+    "description": "Increases critical strike rating by 27.2.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200482": {
+    "benefits": [
+      "Increases haste rating by 27.2."
+    ],
+    "description": "Increases haste rating by 27.2.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "haste"
+    ]
+  },
+  "200483": {
+    "benefits": [
+      "Increases armor penetration rating by 27.2."
+    ],
+    "description": "Increases armor penetration rating by 27.2.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "armor_pen"
+    ]
+  },
+  "200484": {
+    "benefits": [
+      "Increases expertise rating by 27.2."
+    ],
+    "description": "Increases expertise rating by 27.2.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "expertise"
+    ]
+  },
+  "200485": {
+    "benefits": [
+      "Increases maximum mana by 468."
+    ],
+    "description": "Increases maximum mana by 468.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200486": {
+    "benefits": [
+      "Increases all damage dealt by 26."
+    ],
+    "description": "Increases all damage dealt by 26.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200490": {
+    "benefits": [],
+    "description": "Increases your Armor contribution from cloth and leather items by 6%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200491": {
+    "benefits": [],
+    "description": "Allows 8% of your mana regeneration to continue while casting.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200492": {
+    "benefits": [
+      "Increases Strength by 150"
+    ],
+    "description": "Increases Strength by 150",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "strength"
+    ]
+  },
+  "200493": {
+    "benefits": [
+      "Increases Agility by 150"
+    ],
+    "description": "Increases Agility by 150",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "agility"
+    ]
+  },
+  "200494": {
+    "benefits": [
+      "Increases Intellect by 150."
+    ],
+    "description": "Increases Intellect by 150.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "intellect"
+    ]
+  },
+  "200495": {
+    "benefits": [
+      "Increases Spirit by 150."
+    ],
+    "description": "Increases Spirit by 150.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spirit"
+    ]
+  },
+  "200496": {
+    "benefits": [
+      "Increases Stamina by 150."
+    ],
+    "description": "Increases Stamina by 150.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "stamina"
+    ]
+  },
+  "200497": {
+    "benefits": [
+      "Increases mount speed by an"
+    ],
+    "description": "Increases mount speed by an additional 45%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200498": {
+    "benefits": [],
+    "description": "Restores 150 mana every 5 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200499": {
+    "benefits": [
+      "Increases block value by 450."
+    ],
+    "description": "Increases block value by 450.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200500": {
+    "benefits": [
+      "Increases spell power by 300."
+    ],
+    "description": "Increases spell power by 300.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200501": {
+    "benefits": [
+      "Increases attack power by 450."
+    ],
+    "description": "Increases attack power by 450.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200502": {
+    "benefits": [],
+    "description": "After standing still for 2 sec, your armor is increased by 3000 for 5 sec after you move.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200504": {
+    "benefits": [],
+    "description": "Restores 180 health every 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200505": {
+    "benefits": [
+      "Increases armor by 1200"
+    ],
+    "description": "Increases armor by 1200",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200506": {
+    "benefits": [
+      "Reduces all damage taken by 100"
+    ],
+    "description": "Reduces all damage taken by 100",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200507": {
+    "benefits": [
+      "Increases movement speed by an"
+    ],
+    "description": "Increases your movement speed by an additional 24%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200508": {
+    "benefits": [
+      "Increases Fire Resistance by 50."
+    ],
+    "description": "Increases Fire Resistance by 50.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200509": {
+    "benefits": [
+      "Increases Frost Resistance by 50."
+    ],
+    "description": "Increases Frost Resistance by 50.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200510": {
+    "benefits": [
+      "Increases Nature Resistance by 50."
+    ],
+    "description": "Increases Nature Resistance by 50.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200511": {
+    "benefits": [
+      "Increases Arcane Resistance by 50."
+    ],
+    "description": "Increases Arcane Resistance by 50.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200512": {
+    "benefits": [
+      "Increases Shadow Resistance by 50."
+    ],
+    "description": "Increases Shadow Resistance by 50.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200520": {
+    "benefits": [
+      "Increase armor by 75"
+    ],
+    "description": "Your melee attacks increase your armor by 75 for 8 sec. Stacks up to 10 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200521": {
+    "benefits": [
+      "Increases hit rating by 100"
+    ],
+    "description": "Increases hit rating by 100",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "hit"
+    ]
+  },
+  "200522": {
+    "benefits": [
+      "Increases critical strike rating by 100"
+    ],
+    "description": "Increases critical strike rating by 100",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200523": {
+    "benefits": [
+      "Increases haste rating by 100"
+    ],
+    "description": "Increases haste rating by 100",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "haste"
+    ]
+  },
+  "200524": {
+    "benefits": [
+      "Increases armor penetration rating by 100"
+    ],
+    "description": "Increases armor penetration rating by 100",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "armor_pen"
+    ]
+  },
+  "200525": {
+    "benefits": [
+      "Increases expertise rating by 100"
+    ],
+    "description": "Increases expertise rating by 100",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "expertise"
+    ]
+  },
+  "200526": {
+    "benefits": [
+      "Increases maximum mana by 1800"
+    ],
+    "description": "Increases maximum mana by 1800",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200527": {
+    "benefits": [
+      "Increases all damage dealt by 75"
+    ],
+    "description": "Increases all damage dealt by 75",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200528": {
+    "benefits": [],
+    "description": "Increases your Armor contribution from cloth and leather items by 18%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200529": {
+    "benefits": [],
+    "description": "Allows 24% of your mana regeneration to continue while casting.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200530": {
+    "benefits": [],
+    "description": "While in combat, you deal 411.3 Fire damage to enemies within 8 yards every 2 seconds. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200531": {
+    "benefits": [],
+    "description": "Taking direct damage inflict 744.84 Nature damage back to enemies. Damage scales with your Armor and deals at least 5 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200532": {
+    "benefits": [],
+    "description": "Your critical strikes have a 20% chance to deal 658.84 Physical damage to the target. Proc chance tripled against target under 35% health. This effect deals at least 20 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200533": {
+    "benefits": [],
+    "description": "Your melee and ranged attacks wound the target, dealing 988.26 damage over 6 sec. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200534": {
+    "benefits": [],
+    "description": "After you dodge or parry an attack, you deal 718.4 Physical damage to nearby enemies. Damage scales with your Stamina and deals at least 10 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200536": {
+    "benefits": [],
+    "description": "While in combat, you deal 2056.5 Fire damage to enemies within 8 yards every 2 seconds. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200537": {
+    "benefits": [],
+    "description": "Taking direct damage inflict 3724.2 Nature damage back to enemies. Damage scales with your Armor and deals at least 5 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200538": {
+    "benefits": [],
+    "description": "Your critical strikes have a 20% chance to deal 3294.2 Physical damage to the target. Proc chance tripled against target under 35% health. This effect deals at least 20 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200539": {
+    "benefits": [],
+    "description": "Your melee and ranged attacks wound the target, dealing 4941.3 damage over 6 sec. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200540": {
+    "benefits": [],
+    "description": "After you dodge or parry an attack, you deal 3592 Physical damage to nearby enemies. Damage scales with your Stamina and deals at least 10 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200541": {
+    "benefits": [
+      "Increases spell power by 40"
+    ],
+    "description": "Increases your spell power by 40 when fighting Beasts.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200542": {
+    "benefits": [
+      "Increases spell power by 40"
+    ],
+    "description": "Increases your spell power by 40 when fighting Dragonkin.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200543": {
+    "benefits": [
+      "Increases spell power by 40"
+    ],
+    "description": "Increases your spell power by 40 when fighting Demons.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200544": {
+    "benefits": [
+      "Increases spell power by 40"
+    ],
+    "description": "Increases your spell power by 40 when fighting Elementals.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200545": {
+    "benefits": [
+      "Increases spell power by 40"
+    ],
+    "description": "Increases your spell power by 40 when fighting Giants.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200546": {
+    "benefits": [
+      "Increases spell power by 40"
+    ],
+    "description": "Increases your spell power by 40 when fighting Undead.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200547": {
+    "benefits": [
+      "Increases spell power by 40"
+    ],
+    "description": "Increases your spell power by 40 when fighting Mechanical enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200548": {
+    "benefits": [
+      "Increases attack power by 60"
+    ],
+    "description": "Increases your attack power by 60 when fighting Beasts.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200549": {
+    "benefits": [
+      "Increases attack power by 60"
+    ],
+    "description": "Increases your attack power by 60 when fighting Dragonkin.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200550": {
+    "benefits": [
+      "Increases attack power by 60"
+    ],
+    "description": "Increases your attack power by 60 when fighting Demons.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200551": {
+    "benefits": [
+      "Increases attack power by 60"
+    ],
+    "description": "Increases your attack power by 60 when fighting Elementals.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200552": {
+    "benefits": [
+      "Increases attack power by 60"
+    ],
+    "description": "Increases your attack power by 60 when fighting Giants.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200553": {
+    "benefits": [
+      "Increases attack power by 60"
+    ],
+    "description": "Increases your attack power by 60 when fighting Undead.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200554": {
+    "benefits": [
+      "Increases attack power by 60"
+    ],
+    "description": "Increases your attack power by 60 when fighting Mechanical enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200555": {
+    "benefits": [
+      "Increases spell power by 60"
+    ],
+    "description": "Increases your spell power by 60 when fighting Beasts.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200556": {
+    "benefits": [
+      "Increases spell power by 60"
+    ],
+    "description": "Increases your spell power by 60 when fighting Dragonkin.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200557": {
+    "benefits": [
+      "Increases spell power by 60"
+    ],
+    "description": "Increases your spell power by 60 when fighting Demons.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200558": {
+    "benefits": [
+      "Increases spell power by 60"
+    ],
+    "description": "Increases your spell power by 60 when fighting Elementals.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200559": {
+    "benefits": [
+      "Increases spell power by 60"
+    ],
+    "description": "Increases your spell power by 60 when fighting Giants.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200560": {
+    "benefits": [
+      "Increases spell power by 60"
+    ],
+    "description": "Increases your spell power by 60 when fighting Undead.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200561": {
+    "benefits": [
+      "Increases spell power by 60"
+    ],
+    "description": "Increases your spell power by 60 when fighting Mechanical enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200562": {
+    "benefits": [
+      "Increases attack power by 90"
+    ],
+    "description": "Increases your attack power by 90 when fighting Beasts.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200563": {
+    "benefits": [
+      "Increases attack power by 90"
+    ],
+    "description": "Increases your attack power by 90 when fighting Dragonkin.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200564": {
+    "benefits": [
+      "Increases attack power by 90"
+    ],
+    "description": "Increases your attack power by 90 when fighting Demons.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200565": {
+    "benefits": [
+      "Increases attack power by 90"
+    ],
+    "description": "Increases your attack power by 90 when fighting Elementals.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200566": {
+    "benefits": [
+      "Increases attack power by 90"
+    ],
+    "description": "Increases your attack power by 90 when fighting Giants.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200567": {
+    "benefits": [
+      "Increases attack power by 90"
+    ],
+    "description": "Increases your attack power by 90 when fighting Undead.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200568": {
+    "benefits": [
+      "Increases attack power by 90"
+    ],
+    "description": "Increases your attack power by 90 when fighting Mechanical enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200569": {
+    "benefits": [
+      "Increases spell power by 600"
+    ],
+    "description": "Increases your spell power by 600 when fighting Beasts.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200570": {
+    "benefits": [
+      "Increases spell power by 600"
+    ],
+    "description": "Increases your spell power by 600 when fighting Dragonkin.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200571": {
+    "benefits": [
+      "Increases spell power by 600"
+    ],
+    "description": "Increases your spell power by 600 when fighting Demons.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200572": {
+    "benefits": [
+      "Increases spell power by 600"
+    ],
+    "description": "Increases your spell power by 600 when fighting Elementals.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200573": {
+    "benefits": [
+      "Increases spell power by 600"
+    ],
+    "description": "Increases your spell power by 600 when fighting Giants.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200574": {
+    "benefits": [
+      "Increases spell power by 600"
+    ],
+    "description": "Increases your spell power by 600 when fighting Undead.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200575": {
+    "benefits": [
+      "Increases spell power by 600"
+    ],
+    "description": "Increases your spell power by 600 when fighting Mechanical enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200576": {
+    "benefits": [
+      "Increases attack power by 900"
+    ],
+    "description": "Increases your attack power by 900 when fighting Beasts.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200577": {
+    "benefits": [
+      "Increases attack power by 900"
+    ],
+    "description": "Increases your attack power by 900 when fighting Dragonkin.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200578": {
+    "benefits": [
+      "Increases attack power by 900"
+    ],
+    "description": "Increases your attack power by 900 when fighting Demons.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200579": {
+    "benefits": [
+      "Increases attack power by 900"
+    ],
+    "description": "Increases your attack power by 900 when fighting Elementals.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200580": {
+    "benefits": [
+      "Increases attack power by 900"
+    ],
+    "description": "Increases your attack power by 900 when fighting Giants.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200581": {
+    "benefits": [
+      "Increases attack power by 900"
+    ],
+    "description": "Increases your attack power by 900 when fighting Undead.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200582": {
+    "benefits": [
+      "Increases attack power by 900"
+    ],
+    "description": "Increases your attack power by 900 when fighting Mechanical enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200583": {
+    "benefits": [],
+    "description": "While in combat, you are enveloped by a Locust Swarm, reducing damage taken by 20% and dealing 2581 Nature damage to nearby enemies every 2 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200585": {
+    "benefits": [],
+    "description": "Dealing Nature damage grants a stack of Venomous. At 12 stacks, you unleash Poison Bolt Volley, spraying poison at all enemies within 10 yds, dealing 10303 Nature damage and an additional 2581 Nature damage every second for 4 sec. After triggering, you cannot gain Venomous stacks for 4 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200589": {
+    "benefits": [],
+    "description": "When you take damage while below 50% health, you spray webs, dealing 10298 Nature damage to nearby enemies and stunning them for 4 sec. This effect cannot occur more than once every 15 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200592": {
+    "benefits": [],
+    "description": "Dealing Shadow damage applies a stack of Infection to the target. At 12 stacks, you afflict the target with Curse of the Plaguebringer for 10 sec, dealing $ Shadow damage every 2 sec. Each time it deals damage, it spreads to a nearby enemy not already affected.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200595": {
+    "benefits": [
+      "Reduces the damage they deal to you by 10%"
+    ],
+    "description": "Enemies that strike you are afflicted with Decrepit Fever, dealing 1543 Shadow damage each second for 3 sec and reduces the damage they deal to you by 10% for the duration.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200597": {
+    "benefits": [],
+    "description": "While in combat, you periodically summon Spores for 20 sec, increasing the critical strike damage of nearby allies by 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200599": {
+    "benefits": [],
+    "description": "Your melee attacks have a chance to unleash an Unbalancing Strike, dealing 350% weapon damage and leaving the target Unbalanced, increasing your damage dealt to it by 10% for 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200601": {
+    "benefits": [
+      "Increases damage done by 1%"
+    ],
+    "description": "You constantly harvest the souls of nearby enemies, gaining a stack of Harvested Soul. Each stack increases your damage done by 1%. Up to 10% increase. When an enemy with its soul harvested dies, you regain 5204 health.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200606": {
+    "benefits": [],
+    "description": "Your damaging spells and abilities build Edict. At 10 stacks, you invoke an Edict, cycling through the following effects in order: Meteor, Void Zone, Unholy Shadow and Holy Wrath. Each invocation triggers its effect at your target’s location. Meteor : Deals 25756 Fire damage, split between all enemies within 8 yds of the impact. Void Zone : Summons a Void Zone for until cancelled sec that deals 5151 Shadow damage every 1 sec to enemies within it. Unholy Shadow : Deals 10298 Shadow damage, plus 2576 Shadow damage every 1 sec for 8 sec. Holy Wrath : Hurls Holy bolts that deal 7722 Holy damage to the target, jumping to additional nearby enemies. Damage increases by 50% with each jump.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200613": {
+    "benefits": [],
+    "description": "While below 15% health, you go into a Frenzy, increasing Attack Speed by 30% and Physical damage dealt by 25%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200615": {
+    "benefits": [],
+    "description": "Killing an enemy summons a Poison Cloud for 20, dealing 2062 Nature damage to nearby enemies every 1. This effect cannot occur more than once every 8 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200619": {
+    "benefits": [],
+    "description": "Delivering a killing blow unleashes Terrifying Roar, dealing 3095 damage to enemies within 10 yds, slowing them by 50% and causing them to take 15% increased damage from you for 5 sec. This effect cannot occur more than once every 2 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200621": {
+    "benefits": [
+      "Increases critical strike chance by 10%",
+      "Reduces damage taken by 10%",
+      "Increases healing received by 5%",
+      "Increases movement speed by 5%"
+    ],
+    "description": "You alternate between Positive Charge and Negative Charge. Taking direct melee damage shifts you to Negative Charge. While under Negative Charge, going 1 to 0 sec without taking direct melee damage shifts you to Positive Charge. You cannot shift more than once every 4 sec. Positive Charge: Increases your critical strike chance by 10% and damage dealt by 5%. Negative Charge: Reduces damage taken by 10%, increases healing received by 5%, and increases your movement speed by 5%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200627": {
+    "benefits": [],
+    "description": "Dealing Frost damage grants a stack of Rime. At 12 stacks, you unleash Frost Breath in front of you, dealing 18024 Frost damage and leaving enemies hit Brittle for 5 sec. While Brittle is active, your Frost damage against them is increased by 10%. After triggering, you cannot gain Rime stacks for 4 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200632": {
+    "benefits": [],
+    "description": "Killing an enemy grants a Soul Fragment. At 6 Soul Fragments, they are consumed to summon a Servant of the Lich King for 30 sec. You can have up to 6 Servants active at once.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200635": {
+    "benefits": [],
+    "description": "Dealing Fire damage grants a stack of Cinders. At 12 stacks, you summon a Fire Cyclone for 12 sec., dealing 3095 Fire damage to enemies within 10 yds every 2 sec. After triggering, you cannot gain Cinders stacks for 4 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200639": {
+    "benefits": [],
+    "description": "Dealing Arcane damage grants a stack of Overcharge. At 10 stacks, you fire a salvo of Magic Missiles into the air, striking up to 3 enemies near the target for 15444 Arcane damage each. After triggering, you cannot gain Overcharge stacks for 2 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200661": {
+    "benefits": [],
+    "description": "Taking direct damage has a chance to cause a Glacial Spike to erupt beneath the attacker, dealing 514.125 Frost damage and knocking them into the air. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200662": {
+    "benefits": [],
+    "description": "Taking direct damage has a chance to cause a Glacial Spike to erupt beneath the attacker, dealing 1028.25 Frost damage and knocking them into the air. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200663": {
+    "benefits": [],
+    "description": "Taking direct damage has a chance to cause a Glacial Spike to erupt beneath the attacker, dealing 5141.25 Frost damage and knocking them into the air. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200665": {
+    "benefits": [],
+    "description": "While in combat, moving leaves a trail of embers behind you for 3 sec, burning enemies who pass through it for 205.65 Fire damage and slowing them by 30%. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200666": {
+    "benefits": [],
+    "description": "While in combat, moving leaves a trail of embers behind you for 3 sec, burning enemies who pass through it for 411.3 Fire damage and slowing them by 30%. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200667": {
+    "benefits": [],
+    "description": "While in combat, moving leaves a trail of embers behind you for 3 sec, burning enemies who pass through it for 2056.5 Fire damage and slowing them by 30%. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200669": {
+    "benefits": [],
+    "description": "Every 30 seconds, you gain a shield absorbing up to 616.95 damage. This effect absorbs at least 25 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200670": {
+    "benefits": [],
+    "description": "Every 30 seconds, you gain a shield absorbing up to 925.425 damage. This effect absorbs at least 25 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200671": {
+    "benefits": [],
+    "description": "Every 30 seconds, you gain a shield absorbing up to 9254.25 damage. This effect absorbs at least 25 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200672": {
+    "benefits": [],
+    "description": "Your melee attacks have a 10% chance to strike an additional time.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200674": {
+    "benefits": [
+      "Increases damage dealt by 15%"
+    ],
+    "description": "Increases your damage dealt by 15% but reduces your maximum health by 30%.",
+    "downsides": [
+      "Reduces maximum health by 30%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": []
+  },
+  "200675": {
+    "benefits": [],
+    "description": "Your Arcane over time effects can now critically strike.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200676": {
+    "benefits": [],
+    "description": "Your Shadow over time effects can now critically strike.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200677": {
+    "benefits": [],
+    "description": "Your Holy over time effects can now critically strike.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200678": {
+    "benefits": [],
+    "description": "Your Fire over time effects can now critically strike.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200679": {
+    "benefits": [],
+    "description": "Your Frost over time effects can now critically strike.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200680": {
+    "benefits": [],
+    "description": "Your Nature over time effects can now critically strike.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200681": {
+    "benefits": [],
+    "description": "Your Bleed effects can now critically strike.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200682": {
+    "benefits": [],
+    "description": "Increases your damage based on your missing health, up to 20% damage increased at 20% remaing health.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200684": {
+    "benefits": [],
+    "description": "If you have not taken damage in the last 5 sec., your damage dealt is increased by 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200686": {
+    "benefits": [
+      "Reduce the remaining cooldown of some random ability by 2"
+    ],
+    "description": "Your auto-shots reduce the remaining cooldown of some random ability by 2 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200687": {
+    "benefits": [
+      "Reduce the remaining cooldown of a random ability by 1.5"
+    ],
+    "description": "Your melee attacks reduce the remaining cooldown of a random ability by 1.5 sec. This effect cannot occur more than once 1,5 seconds.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200688": {
+    "benefits": [
+      "Increases damage dealt by 2%"
+    ],
+    "description": "Moving increases your damage dealt by 2%, stacking up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200690": {
+    "benefits": [],
+    "description": "Fatal damage instead reduces you to 1 health, prevents all damage for 3 sec, and heals you for 35% of your maximum health. This effect cannot occur more than once every 60 min and can trigger without consuming Cheat Death charges.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200693": {
+    "benefits": [],
+    "description": "Your damage against enemies below 35% health is increased by 20%. When you damage an enemy below 15% health, you deal an additional 7762 Shadow damage. This effect cannot occur more than once every 2 sec per target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200695": {
+    "benefits": [],
+    "description": "Dealing damage afflict the target with Reaper’s Doom for 30 sec. When it expires, it detonates for 15474 Shadow damage split between all enemies within 8 yards. If the target dies while afflicted, Reaper’s Doom detonates immediately.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200699": {
+    "benefits": [],
+    "description": "Your direct damage spells cause the target to burn, dealing 122.82 Fire damage over 6 sec. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200700": {
+    "benefits": [],
+    "description": "Your direct damage spells cause the target to burn, dealing 245.64 Fire damage over 6 sec. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200701": {
+    "benefits": [],
+    "description": "Your direct damage spells cause the target to burn, dealing 1228.2 Fire damage over 6 sec. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200703": {
+    "benefits": [],
+    "description": "Your direct damage spell critical strikes have a 20% chance to deal 81.88 Shadow damage to the target. Proc chance tripled against target under 35% health. This effect deals at least 20 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200704": {
+    "benefits": [],
+    "description": "Your direct damage spell critical strikes have a 20% chance to deal 163.76 Shadow damage to the target. Proc chance tripled against target under 35% health. This effect deals at least 20 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200705": {
+    "benefits": [],
+    "description": "Your direct damage spell critical strikes have a 20% chance to deal 818.8 Shadow damage to the target. Proc chance tripled against target under 35% health. This effect deals at least 20 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200706": {
+    "benefits": [],
+    "description": "Your melee attacks slow enemies by 30% for 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200708": {
+    "benefits": [],
+    "description": "Your direct damage spells slow enemies by 30% for 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200710": {
+    "benefits": [],
+    "description": "Your damage over time effects slow the target’s melee and ranged attack speed by 10%. This effect does not stack.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200712": {
+    "benefits": [],
+    "description": "When you are hit by a spell, you have a 30% chance to boost your resistance to that type of magic by 10 for 15 sec. Stacks up to 3 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200720": {
+    "benefits": [],
+    "description": "While above 15% mana, your melee and ranged basic attacks deal an additional 20% Arcane damage, but consume 5% of your base mana.",
+    "downsides": [
+      "Consumes 5% of mana"
+    ],
+    "explicit_tradeoff": false,
+    "has_downside": true,
+    "stats": []
+  },
+  "200722": {
+    "benefits": [],
+    "description": "After remaining on the same target for 6 sec, you deal 8% increased damage to that target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200724": {
+    "benefits": [
+      "Reduces the remaining cooldown of all your abilities by 1"
+    ],
+    "description": "Killing an enemy reduces the remaining cooldown of all your abilities by 1 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200726": {
+    "benefits": [],
+    "description": "When you are above 75% health, you deal 10% more damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200728": {
+    "benefits": [
+      "Increases critical strike damage by 30%"
+    ],
+    "description": "Reduces your critical strike chance by 50%, but increases your critical strike damage by 30%.",
+    "downsides": [
+      "Reduces critical strike chance by 50%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200730": {
+    "benefits": [],
+    "description": "Your critical strikes grant 1% Haste for 2 sec. Stacking up to 5 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200732": {
+    "benefits": [
+      "Increases damage dealt by 15%"
+    ],
+    "description": "Increases your damage dealt by 15%, but increases damage taken by 30%.",
+    "downsides": [
+      "Increases damage taken by 30%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": []
+  },
+  "200734": {
+    "benefits": [
+      "Increases spell Haste by 10%"
+    ],
+    "description": "Increases your spell Haste by 10%, but reduces your movement speed by 30%.",
+    "downsides": [
+      "Reduces movement speed by 30%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": [
+      "haste"
+    ]
+  },
+  "200736": {
+    "benefits": [
+      "Increases critical strike chance by 10%"
+    ],
+    "description": "Increases your critical strike chance by 10%, but reduces your Armor by 30%.",
+    "downsides": [
+      "Reduces Armor by 30%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200738": {
+    "benefits": [
+      "Increases spell damage by 15%"
+    ],
+    "description": "Increases your spell damage by 15%, but reduces your maximum mana by 30%.",
+    "downsides": [
+      "Reduces maximum mana by 30%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200740": {
+    "benefits": [
+      "Increases physical damage by 15%"
+    ],
+    "description": "Increases your physical damage by 15%, but reduces your Attack Speed by 30%.",
+    "downsides": [
+      "Reduces Attack Speed by 30%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": []
+  },
+  "200742": {
+    "benefits": [],
+    "description": "Every third direct damage spell you cast in a row deals 20% additional Arcane damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200744": {
+    "benefits": [],
+    "description": "Your direct-damage abilities apply an Unstable Infusion to the target for 6 sec. While Unstable Infusion is active, your critical strikes have a 30% chance to trigger an unstable explosion, dealing 4524.3 enemies within 8 yards of your primary target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200745": {
+    "benefits": [],
+    "description": "Your direct-damage abilities apply an Unstable Infusion to the target for 6 sec. While Unstable Infusion is active, your critical strikes have a 30% chance to trigger an unstable explosion, dealing 4524.3 enemies within 8 yards of your primary target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200746": {
+    "benefits": [],
+    "description": "Your direct-damage abilities apply an Unstable Infusion to the target for 6 sec. While Unstable Infusion is active, your critical strikes have a 30% chance to trigger an unstable explosion, dealing 4524.3 enemies within 8 yards of your primary target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200747": {
+    "benefits": [],
+    "description": "Your direct-damage abilities apply an Unstable Infusion to the target for 6 sec. While Unstable Infusion is active, your critical strikes have a 30% chance to trigger an unstable explosion, dealing 4524.3 enemies within 8 yards of your primary target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200748": {
+    "benefits": [],
+    "description": "Your direct-damage abilities apply an Unstable Infusion to the target for 6 sec. While Unstable Infusion is active, your critical strikes have a 30% chance to trigger an unstable explosion, dealing 4524.3 enemies within 8 yards of your primary target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200749": {
+    "benefits": [],
+    "description": "Your direct-damage abilities apply an Unstable Infusion to the target for 6 sec. While Unstable Infusion is active, your critical strikes have a 30% chance to trigger an unstable explosion, dealing 4524.3 enemies within 8 yards of your primary target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200750": {
+    "benefits": [],
+    "description": "Your direct-damage abilities apply an Unstable Infusion to the target for 6 sec. While Unstable Infusion is active, your critical strikes have a 30% chance to trigger an unstable explosion, dealing 4524.3 enemies within 8 yards of your primary target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200751": {
+    "benefits": [],
+    "description": "Your direct-damage abilities apply an Unstable Infusion to the target for 6 sec. While Unstable Infusion is active, your critical strikes have a 30% chance to trigger an unstable explosion, dealing 4524.3 enemies within 8 yards of your primary target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200752": {
+    "benefits": [
+      "Increases spell damage by 10%",
+      "Increases healing done by 10%"
+    ],
+    "description": "Casting a healing spell increases your spell damage by 10% for 4 sec. Casting a damaging spell increases your healing done by 10% for 4 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200756": {
+    "benefits": [],
+    "description": "When you kill a target, all your remaining damage-over-time on it instantly detonate, dealing 30% of their combined remaining damage to enemies within 8 yards.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200759": {
+    "benefits": [
+      "Increases pets' Stamina by 71.84"
+    ],
+    "description": "Increases your pets' Stamina by 71.84, based on your Stamina.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "stamina"
+    ]
+  },
+  "200760": {
+    "benefits": [
+      "Increases pets' Stamina by 107.76"
+    ],
+    "description": "Increases your pets' Stamina by 107.76, based on your Stamina.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "stamina"
+    ]
+  },
+  "200761": {
+    "benefits": [
+      "Increases pets' Stamina by 1077.6"
+    ],
+    "description": "Increases your pets' Stamina by 1077.6, based on your Stamina.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "stamina"
+    ]
+  },
+  "200763": {
+    "benefits": [
+      "Increases pets' Attack power by 329.42"
+    ],
+    "description": "Increases your pets' Attack power by 329.42, based on your Attack power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200764": {
+    "benefits": [
+      "Increases pets' Attack power by 494.13"
+    ],
+    "description": "Increases your pets' Attack power by 494.13, based on your Attack power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200765": {
+    "benefits": [
+      "Increases pets' Attack power by 4941.3"
+    ],
+    "description": "Increases your pets' Attack power by 4941.3, based on your Attack power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "attack_power"
+    ]
+  },
+  "200767": {
+    "benefits": [
+      "Increases pets' Spell power by 40.94"
+    ],
+    "description": "Increases your pets' Spell power by 40.94, based on your Spell power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200768": {
+    "benefits": [
+      "Increases pets' Spell power by 61.41"
+    ],
+    "description": "Increases your pets' Spell power by 61.41, based on your Spell power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200769": {
+    "benefits": [
+      "Increases pets' Spell power by 614.1"
+    ],
+    "description": "Increases your pets' Spell power by 614.1, based on your Spell power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200772": {
+    "benefits": [],
+    "description": "Every 5 sec while in combat, pulls nearby enemies toward you and deal 308.475 Lightning damage. This effect deals at least 12 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200773": {
+    "benefits": [],
+    "description": "Every 5 sec while in combat, pulls nearby enemies toward you and deal 616.95 Lightning damage. This effect deals at least 12 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200774": {
+    "benefits": [],
+    "description": "Every 5 sec while in combat, pulls nearby enemies toward you and deal 3084.75 Lightning damage. This effect deals at least 12 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200776": {
+    "benefits": [],
+    "description": "Dodging or Parrying builds Pressure, maximum 1 stack every 0,3 seconds. At 12 stacks, you vent flames for 8 sec, dealing 2878.6 Fire damage every 1 sec to enemies within 0 yards, scaling with your Stamina. While Flame Vents is active, you take 15% reduced damage and your movement speed is increased by an additional 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200780": {
+    "benefits": [],
+    "description": "Your Fire damage builds Heat on the target. At 10 stacks, the target becomes Brittle for 6 sec, increasing your critical strike chance against it by 20%. While Brittle is active, your next Fire critical strike against the target causes it to Shatter, dealing 10302.5 Fire damage to enemies within 8 yards. Once Brittle expires, the target cannot gain Heat stacks for 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200786": {
+    "benefits": [],
+    "description": "Every 8 sec while in combat, you throw Harpoons at up to 5 enemies between 8 and 35 yards away, pulling them to you and Pinning them for 5 sec. Pinned enemies are slowed by 50% and take 15% increased damage from you.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200792": {
+    "benefits": [],
+    "description": "Your basic attacks builds Stress. At 12 stacks, you expose your target’s heart for 6 sec, increasing your damage dealt to it by 20%. While Exposed Heart is active, 40% of the damage you deal to the target is also dealt to all enemies within 8 yards of it. While Exposed Heart is active and up to 6 seconds after it expires you cannot generate Stress on any target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200798": {
+    "benefits": [],
+    "description": "Your damaging spells and abilities build Edict. At 10 stacks, you invoke an Edict, cycling through the following effects in order: Rune of Death, Overload, Fusion Punch. Rune of Death : Summons a Rune of Death under your target for 8 sec, dealing 2575.625 Shadow damage every half-second to enemies within 13 yards. Overload : You erupt with lightning, dealing 18029.375 Nature damage to enemies within 10 yards. Fusion Punch : Your next melee attack deals an additional 25756.25 Nature damage and an additional 12878.125 Nature damage every 1 sec for 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200804": {
+    "benefits": [],
+    "description": "The first time you damage an enemy, you mark it with Fracture for 10 sec. If it dies while fractured, it shatters, dealing 5151.25 Physical damage to enemies within 8 yards.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200808": {
+    "benefits": [],
+    "description": "While in combat you are accompanied by two Sanctum Sentries. Enemies struck by either guardian take 10% increased damage from you for 4 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200818": {
+    "benefits": [],
+    "description": "Up to 20% of your overhealing on allies is stored as Eonar’s Seed for 10 sec. When the target health lowers under 50%, it blooms, healing the target aswell as the most injured nearby ally for the stored amount. Stored amount cannot exceed 40% of the target's maximum health.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200822": {
+    "benefits": [],
+    "description": "Your Frost damage applies Biting Cold for 6 sec, stacking up to 10 times. Your direct Fire damage against a target with 6 or more stacks Shatters it, consuming all stacks and dealing 1545.375 Frost damage per stack to the target and to enemies within 8 yards.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200826": {
+    "benefits": [],
+    "description": "Your melee and ranged attacks have a 5% chance to launch a Rocket at your target, dealing 7726.875 Fire damage. You fire 1 additional Rocket on random nearby enemies for each of your active pets or guardians. Subsequent Rockets hitting the same target deal reduced damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200830": {
+    "benefits": [
+      "Increases attack speed by 2%"
+    ],
+    "description": "While in combat, you gain Lightning Charged every 8 sec, stacking up to 5 times lasting 12 sec. Each stack increases your attack speed by 2% and causes your melee and ranged auto-attacks to deal an additional 824.55 Nature damage. At 5 stacks, your auto-attacks instead unleash Chain Lightning at the target, dealing 4122.75 Nature damage and chaining up to 5 times. Effect is lost on exiting combat.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200834": {
+    "benefits": [],
+    "description": "Your Shadow damage-over-time damage have a 3% chance to hurl a Shadow Crash at the target. On impact, it deals 10302.5 Shadow damage to enemies within 10 yards",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200838": {
+    "benefits": [],
+    "description": "Whenever you kill an enemy, gain a stack of Idol of Yogg-Saron. At 10 stacks, you summon a Thing from Beyond that casts Void Spike at nearby enemies for 20 sec. Void Spike : Hurls a bolt of dark magic, dealing 7726.875 Shadow damage and 2061.5 Shadow damage to all enemies within 10 yards of the target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200844": {
+    "benefits": [],
+    "description": "Your critical strikes have a 10% chance to summon a Falling Star that strikes a nearby enemy for 5151.25 Arcane damage. After 5 Falling Stars strike, you trigger Big Bang, dealing 51512.5 Arcane damage split between all enemies within 12 yards of your target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200850": {
+    "benefits": [],
+    "description": "When struck by a melee attack, you have a chance to launch an earthen spike at the attacker, dealing 5606.3 damage to the attacker and nearby enemies. Damage is further increased by your Armor and generates a high amount of threat.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200852": {
+    "benefits": [],
+    "description": "Dealing Fire damage grants a stack of Kindling. At 100 stacks, you erupt in flame, dealing 30937.5 Fire damage to nearby enemies and 30937.5 additional Fire damage over time for 6 sec. After erupting, you cannot gain Kindling for 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200856": {
+    "benefits": [],
+    "description": "While above 80% mana, restoring mana also restores health equal to 50% of the mana restored.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200858": {
+    "benefits": [],
+    "description": "While in combat, you deal 1645.2 Frost damage every 2 sec to enemies within 8 yards. This effect deals at least 5 damage. Enemies hit have their attack speed reduced by 5% for 3 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200860": {
+    "benefits": [],
+    "description": "Every 3 sec while in combat, your next spell or ability also hurls lightning at up to 3 random nearby enemies, dealing 4113 Nature damage. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200864": {
+    "benefits": [],
+    "description": "Your direct spells have a chance to launch an Unstable Missile at the target, dealing 3084.75 Arcane damage. This effect deals at least 10 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200866": {
+    "benefits": [],
+    "description": "Every 2 sec while in combat, you afflict a nearby enemy with Siphon Life, dealing 12339 Shadow damage over 12 sec. If the affected target dies, you are healed for 2056.5. This effect deals at least 5 damage and heals at least 10 health.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200870": {
+    "benefits": [],
+    "description": "While below 80% Energy, your Energy regeneration is increased by 10%. While above 80% Energy, your damage done is increased by 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200874": {
+    "benefits": [],
+    "description": "While below 80% Rage, your Rage generation is increased by 20%. While above 80% Rage, your damage done is increased by 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200878": {
+    "benefits": [],
+    "description": "While below 80% Runic Power, your Runic Power generation is increased by 20%. While above 80% Runic Power, your damage done is increased by 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200882": {
+    "benefits": [
+      "Increases Spell Power by an"
+    ],
+    "description": "Increases your Spell Power by an amount equal to 5% of your Armor, up to a maximum of 150% of your intellect. Current bonus: 184.5 Spell Power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "spell_power"
+    ]
+  },
+  "200884": {
+    "benefits": [
+      "Reduces damage taken by 35%"
+    ],
+    "description": "Reduces damage taken by 35%, but reduces damage dealt by 70%. Increases threat generated by 200%.",
+    "downsides": [
+      "Reduces damage dealt by 70%",
+      "Increases threat generated by 200%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": []
+  },
+  "200886": {
+    "benefits": [
+      "Increases maximum health by 50%"
+    ],
+    "description": "Increases your maximum health by 50%, but reduces healing received by 60%.",
+    "downsides": [
+      "Reduces healing received by 60%"
+    ],
+    "explicit_tradeoff": true,
+    "has_downside": true,
+    "stats": []
+  },
+  "200888": {
+    "benefits": [],
+    "description": "While above 20% mana, your spell damage done is increased by 15%, but your ressource costs are increased by 50%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200890": {
+    "benefits": [],
+    "description": "When you damage a target below 30% health with a melee or ranged attack, you Execute it, dealing 8245.5 Physical damage. Damage is increased by 2% per point of Expertise. Cannot occur more than once every 6 sec per target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200894": {
+    "benefits": [
+      "Increases the damage you deal by 10%"
+    ],
+    "description": "Dealing Fire, Frost, and Arcane damage within 6 sec increases the damage you deal by 10% for 12 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200896": {
+    "benefits": [
+      "Increases the damage you deal by 10%"
+    ],
+    "description": "Dealing Fire and Shadow damage within 3 sec increases the damage you deal by 10% for 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200898": {
+    "benefits": [
+      "Increases critical strike damage by 1%"
+    ],
+    "description": "Increases your critical strike damage by 1%, plus an additional 1% for every 150 Critical Strike Rating you have. Current bonus: 7%",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": [
+      "crit"
+    ]
+  },
+  "200900": {
+    "benefits": [
+      "Increases damage done by 3%"
+    ],
+    "description": "Casting an offensive spell or ability increases your damage done by 3% for 6 sec. While this effect is active, each different offensive spell or ability you use increases this bonus by an additional 3% and refreshes the duration.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200902": {
+    "benefits": [
+      "Increases healing done by 3%"
+    ],
+    "description": "Casting a healing spell or ability increases your healing done by 3% for 6 sec. While this effect is active, each different healing spell or ability you use increases this bonus by an additional 3% and refreshes the duration.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200904": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Thunder Clap, Shockwave, Whirlwind, and Bladestorm is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200908": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Consecration, Divine Storm, and Hammer of the Righteous is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200912": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Death and Decay, Blood Boil, Howling Blast, and Corpse Explosion is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200916": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Volley and Multi-Shot is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200920": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Chain Lightning and Thunderstorm is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200924": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Hurricane, Starfall, and Swipe is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200928": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Fan of Knives is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200932": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Arcane Explosion, Blizzard, Flamestrike, and Blast Wave is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200936": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Holy Nova is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200940": {
+    "benefits": [],
+    "description": "While 4 or more enemies are within range, the damage of your Rain of Fire, Hellfire, Shadowflame, and Shadowfury is increased by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200944": {
+    "benefits": [],
+    "description": "Casting a spell or ability has a chance to make your next eligible spell instant-cast. Eligible spells : Exorcism, Flash of Light, Holy Light.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200946": {
+    "benefits": [],
+    "description": "Casting a spell or ability has a chance to make your next eligible spell instant-cast. Eligible spells: Smite, Holy Fire, Mind Blast, Flash Heal, Greater Heal, Heal, Binding Heal, and Prayer of Healing.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200948": {
+    "benefits": [],
+    "description": "Casting a spell or ability has a chance to make your next eligible spell instant-cast. Eligible spells: Lightning Bolt, Chain Lightning, Lava Burst, Healing Wave, Chain Heal.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200950": {
+    "benefits": [],
+    "description": "Casting a spell or ability has a chance to make your next eligible spell instant-cast. Eligible spells: Arcane Blast, Fireball, Frostbolt, Frostfire Bolt, Pyroblast, Flamestrike.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200952": {
+    "benefits": [],
+    "description": "Casting a spell or ability has a chance to make your next eligible spell instant-cast. Eligible spells: Shadow Bolt, Incinerate, Soul Fire, Chaos Bolt, Seed of Corruption, Haunt, Unstable Affliction.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200954": {
+    "benefits": [],
+    "description": "Casting a spell or ability has a chance to make your next eligible spell instant-cast. Eligible spells: Wrath, Starfire. Healing: Healing Touch, Nourish, Regrowth.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200956": {
+    "benefits": [],
+    "description": "Increases the damage of spells with a base cast time longer than 2.5 seconds by 30%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200958": {
+    "benefits": [],
+    "description": "You can equip all weapon types.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200960": {
+    "benefits": [
+      "Increases damage by 1%"
+    ],
+    "description": "Increases your damage by 1% for each unique Echo you have active. Additional ranks or qualities of the same Echo do not increase this bonus.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200962": {
+    "benefits": [],
+    "description": "While you have at least 3 different Base Stat Echo types active (Strength, Agility, Intellect, Spirit, or Stamina), your damage is increased by 15%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200964": {
+    "benefits": [],
+    "description": "For every 60 Rage you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200965": {
+    "benefits": [],
+    "description": "For every 60 Rage you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200966": {
+    "benefits": [],
+    "description": "For every 60 Rage you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200968": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200969": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200970": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200972": {
+    "benefits": [],
+    "description": "For every 40 Runic Power you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200973": {
+    "benefits": [],
+    "description": "For every 40 Runic Power you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200974": {
+    "benefits": [],
+    "description": "For every 40 Runic Power you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200976": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200977": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200978": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200980": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200981": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200982": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200984": {
+    "benefits": [],
+    "description": "For every 60 Rage, 80 Energy, or 40 Mana you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200985": {
+    "benefits": [],
+    "description": "For every 60 Rage, 80 Energy, or 40 Mana you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200986": {
+    "benefits": [],
+    "description": "For every 60 Rage, 80 Energy, or 40 Mana you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200988": {
+    "benefits": [],
+    "description": "For every 80 Energy you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200989": {
+    "benefits": [],
+    "description": "For every 80 Energy you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200990": {
+    "benefits": [],
+    "description": "For every 80 Energy you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200992": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200993": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200994": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200996": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200997": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "200998": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201000": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 411.3 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201001": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 822.6 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201002": {
+    "benefits": [],
+    "description": "For every (40 + 12 per level) Mana you spend, a tiny ember leaps from you, dealing 4113 Fire damage to a random enemy within 20 yards. This effect deals at least 15 damage and cannot occur more than once every 1.50 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201004": {
+    "benefits": [],
+    "description": "When you cast Mortal Strike, Bloodthirst, or Shield Slam, you hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201005": {
+    "benefits": [],
+    "description": "When you cast Mortal Strike, Bloodthirst, or Shield Slam, you hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201006": {
+    "benefits": [],
+    "description": "When you cast Mortal Strike, Bloodthirst, or Shield Slam, you hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201008": {
+    "benefits": [],
+    "description": "When you cast Judgement, you hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201009": {
+    "benefits": [],
+    "description": "When you cast Judgement, you hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201010": {
+    "benefits": [],
+    "description": "When you cast Judgement, you hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201012": {
+    "benefits": [],
+    "description": "When you cast Death Strike, Heart Strike, Obliterate, or Scourge Strike, you hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201013": {
+    "benefits": [],
+    "description": "When you cast Death Strike, Heart Strike, Obliterate, or Scourge Strike, you hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201014": {
+    "benefits": [],
+    "description": "When you cast Death Strike, Heart Strike, Obliterate, or Scourge Strike, you hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201016": {
+    "benefits": [],
+    "description": "Your Auto Shot critical strikes have a chance to hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201017": {
+    "benefits": [],
+    "description": "Your Auto Shot critical strikes have a chance to hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201018": {
+    "benefits": [],
+    "description": "Your Auto Shot critical strikes have a chance to hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201020": {
+    "benefits": [],
+    "description": "When you cast Lightning Bolt, Chain Lightning, Healing Wave, or Chain Heal, you hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201021": {
+    "benefits": [],
+    "description": "When you cast Lightning Bolt, Chain Lightning, Healing Wave, or Chain Heal, you hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201022": {
+    "benefits": [],
+    "description": "When you cast Lightning Bolt, Chain Lightning, Healing Wave, or Chain Heal, you hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201024": {
+    "benefits": [],
+    "description": "When you cast Starfire, Nourish, or Mangle, you hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201025": {
+    "benefits": [],
+    "description": "When you cast Starfire, Nourish, or Mangle, you hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201026": {
+    "benefits": [],
+    "description": "When you cast Starfire, Nourish, or Mangle, you hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201028": {
+    "benefits": [],
+    "description": "When you cast Mutilate, Sinister Strike, or Hemorrhage, you have a chance to hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201029": {
+    "benefits": [],
+    "description": "When you cast Mutilate, Sinister Strike, or Hemorrhage, you have a chance to hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201030": {
+    "benefits": [],
+    "description": "When you cast Mutilate, Sinister Strike, or Hemorrhage, you have a chance to hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201032": {
+    "benefits": [],
+    "description": "When you cast Arcane Blast, Fireball, Frostbolt, or Frostfire Bolt, you hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201033": {
+    "benefits": [],
+    "description": "When you cast Arcane Blast, Fireball, Frostbolt, or Frostfire Bolt, you hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201034": {
+    "benefits": [],
+    "description": "When you cast Arcane Blast, Fireball, Frostbolt, or Frostfire Bolt, you hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201036": {
+    "benefits": [],
+    "description": "When you cast Smite, Flash Heal, Greater Heal, or Mind Blast, you hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201037": {
+    "benefits": [],
+    "description": "When you cast Smite, Flash Heal, Greater Heal, or Mind Blast, you hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201038": {
+    "benefits": [],
+    "description": "When you cast Smite, Flash Heal, Greater Heal, or Mind Blast, you hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201040": {
+    "benefits": [],
+    "description": "Your Warlock periodic damage has a chance to cause you to hurl a boulder at the target, dealing 514.125 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201041": {
+    "benefits": [],
+    "description": "Your Warlock periodic damage has a chance to cause you to hurl a boulder at the target, dealing 1028.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201042": {
+    "benefits": [],
+    "description": "Your Warlock periodic damage has a chance to cause you to hurl a boulder at the target, dealing 5141.25 Physical damage to all enemies within 8 yards of the impact. This effect deals at least 15 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201144": {
+    "benefits": [],
+    "description": "When you cast a melee ability, you have a 20% chance to launch 3 missiles at a random nearby location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201145": {
+    "benefits": [],
+    "description": "When you cast a melee ability, you have a 20% chance to launch 3 missiles at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201146": {
+    "benefits": [],
+    "description": "When you cast a melee ability, you have a 20% chance to launch 3 missiles at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201148": {
+    "benefits": [],
+    "description": "When you cast Crusader Strike, Hammer of the Righteous, Judgement or Holy Shock, you launch 2 missiles at a random nearby location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201149": {
+    "benefits": [],
+    "description": "When you cast Crusader Strike, Hammer of the Righteous, Judgement or Holy Shock, you launch 2 missiles at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201150": {
+    "benefits": [],
+    "description": "When you cast Crusader Strike, Hammer of the Righteous, Judgement or Holy Shock, you launch 2 missiles at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201152": {
+    "benefits": [],
+    "description": "Each time you spend a Rune, you launch a missile at a random nearby location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201153": {
+    "benefits": [],
+    "description": "Each time you spend a Rune, you launch a missile at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201154": {
+    "benefits": [],
+    "description": "Each time you spend a Rune, you launch a missile at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201156": {
+    "benefits": [],
+    "description": "When you cast Arcane Shot, Aimed Shot, Explosive Shot, or Chimera Shot, you launch 3 missiles at a random nearby location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201157": {
+    "benefits": [],
+    "description": "When you cast Arcane Shot, Aimed Shot, Explosive Shot, or Chimera Shot, you launch 3 missiles at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201158": {
+    "benefits": [],
+    "description": "When you cast Arcane Shot, Aimed Shot, Explosive Shot, or Chimera Shot, you launch 3 missiles at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201160": {
+    "benefits": [],
+    "description": "When you cast Flame Shock, Earth Shock, or Frost Shock, you launch 2 missiles at a random location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201161": {
+    "benefits": [],
+    "description": "When you cast Flame Shock, Earth Shock, or Frost Shock, you launch 2 missiles at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201162": {
+    "benefits": [],
+    "description": "When you cast Flame Shock, Earth Shock, or Frost Shock, you launch 2 missiles at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201164": {
+    "benefits": [],
+    "description": "When you cast Wrath, Starfire, Regrowth, Shred, or Maul, you have a chance to launch 3 missiles at a random nearby location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201165": {
+    "benefits": [],
+    "description": "When you cast Wrath, Starfire, Regrowth, Shred, or Maul, you have a chance to launch 3 missiles at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201166": {
+    "benefits": [],
+    "description": "When you cast Wrath, Starfire, Regrowth, Shred, or Maul, you have a chance to launch 3 missiles at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201168": {
+    "benefits": [],
+    "description": "When you use a finishing move, you have a 20% chance per combo point to launch 3 missiles at a random nearby location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201169": {
+    "benefits": [],
+    "description": "When you use a finishing move, you have a 20% chance per combo point to launch 3 missiles at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201170": {
+    "benefits": [],
+    "description": "When you use a finishing move, you have a 20% chance per combo point to launch 3 missiles at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201172": {
+    "benefits": [],
+    "description": "Your critical strikes have a chance to launch a missile at a random nearby location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201173": {
+    "benefits": [],
+    "description": "Your critical strikes have a chance to launch a missile at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201174": {
+    "benefits": [],
+    "description": "Your critical strikes have a chance to launch a missile at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201176": {
+    "benefits": [],
+    "description": "Your periodic damage from Shadow Word: Pain and periodic healing from Renew have a chance to launch a missile at a nearby random location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201177": {
+    "benefits": [],
+    "description": "Your periodic damage from Shadow Word: Pain and periodic healing from Renew have a chance to launch a missile at a nearby random location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201178": {
+    "benefits": [],
+    "description": "Your periodic damage from Shadow Word: Pain and periodic healing from Renew have a chance to launch a missile at a nearby random location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201180": {
+    "benefits": [],
+    "description": "Periodic damage from Immolate, Corruption, and Curse of Agony has a chance to launch a missile at a random nearby location, dealing 719.775 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201181": {
+    "benefits": [],
+    "description": "Periodic damage from Immolate, Corruption, and Curse of Agony has a chance to launch a missile at a random nearby location, dealing 1439.55 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201182": {
+    "benefits": [],
+    "description": "Periodic damage from Immolate, Corruption, and Curse of Agony has a chance to launch a missile at a random nearby location, dealing 7609.525 Arcane damage to enemies hit. This effect deals at least 30 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201184": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Thunder Clap, Whirlwind, Revenge, or Shockwave unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201185": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Thunder Clap, Whirlwind, Revenge, or Shockwave unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201186": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Thunder Clap, Whirlwind, Revenge, or Shockwave unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201188": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Consecration, Divine Storm, Shield of Righteousness, or Avenger's Shield unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201189": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Consecration, Divine Storm, Shield of Righteousness, or Avenger's Shield unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201190": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Consecration, Divine Storm, Shield of Righteousness, or Avenger's Shield unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201192": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Blood Boil, Howling Blast, Icy Touch, or Death and Decay unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201193": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Blood Boil, Howling Blast, Icy Touch, or Death and Decay unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201194": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Blood Boil, Howling Blast, Icy Touch, or Death and Decay unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201196": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Raptor Strike or Multi-Shot unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201197": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Raptor Strike or Multi-Shot unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201198": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Raptor Strike or Multi-Shot unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201200": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Thunderstorm, Stormstrike, Earth Shock, Flame Shock, or Frost Shock unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201201": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Thunderstorm, Stormstrike, Earth Shock, Flame Shock, or Frost Shock unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201202": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Thunderstorm, Stormstrike, Earth Shock, Flame Shock, or Frost Shock unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201204": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Typhoon, Swipe, Swiftmend, or Hurricane unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201205": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Typhoon, Swipe, Swiftmend, or Hurricane unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201206": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Typhoon, Swipe, Swiftmend, or Hurricane unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201208": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Fan of Knives, Blade Flurry, or Ghostly Strike unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201209": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Fan of Knives, Blade Flurry, or Ghostly Strike unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201210": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Fan of Knives, Blade Flurry, or Ghostly Strike unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201212": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Cone of Cold, Arcane Explosion, Frost Nova, or Dragon's Breath unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201213": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Cone of Cold, Arcane Explosion, Frost Nova, or Dragon's Breath unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201214": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Cone of Cold, Arcane Explosion, Frost Nova, or Dragon's Breath unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201216": {
+    "benefits": [],
+    "description": "Every 5 sec, your next your next Holy Nova or Mind Sear unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201217": {
+    "benefits": [],
+    "description": "Every 5 sec, your next your next Holy Nova or Mind Sear unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201218": {
+    "benefits": [],
+    "description": "Every 5 sec, your next your next Holy Nova or Mind Sear unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201220": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Shadowflame, Death Coil, Shadowfury, or Drain Life unleashes Acid Breath, dealing 411.3 Nature damage to enemies in front of you and an additional 82.26 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201221": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Shadowflame, Death Coil, Shadowfury, or Drain Life unleashes Acid Breath, dealing 822.6 Nature damage to enemies in front of you and an additional 164.52 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201222": {
+    "benefits": [],
+    "description": "Every 5 sec, your next Shadowflame, Death Coil, Shadowfury, or Drain Life unleashes Acid Breath, dealing 4113 Nature damage to enemies in front of you and an additional 822.6 Nature damage every second for 5 sec. This effect deals at least 15 damage and an additional 3 every second.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201224": {
+    "benefits": [
+      "Increases mana regeneration by 1%"
+    ],
+    "description": "Increases your mana regeneration by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201225": {
+    "benefits": [
+      "Increases mana regeneration by 2%"
+    ],
+    "description": "Increases your mana regeneration by 2%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201226": {
+    "benefits": [
+      "Increases mana regeneration by 10%"
+    ],
+    "description": "Increases your mana regeneration by 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201228": {
+    "benefits": [
+      "Increases Rage generation by 1%"
+    ],
+    "description": "Increases your Rage generation by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201229": {
+    "benefits": [
+      "Increases Rage generation by 2%"
+    ],
+    "description": "Increases your Rage generation by 2%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201230": {
+    "benefits": [
+      "Increases Rage generation by 10%"
+    ],
+    "description": "Increases your Rage generation by 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201232": {
+    "benefits": [
+      "Increases Energy regeneration by 2%"
+    ],
+    "description": "Increases your Energy regeneration by 2%",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201233": {
+    "benefits": [
+      "Increases Energy regeneration by 10%"
+    ],
+    "description": "Increases your Energy regeneration by 10%",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201234": {
+    "benefits": [
+      "Increases Runic Power generation by 1%"
+    ],
+    "description": "Increases your Runic Power generation by 1%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201235": {
+    "benefits": [
+      "Increases Runic Power generation by 2%"
+    ],
+    "description": "Increases your Runic Power generation by 2%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201236": {
+    "benefits": [
+      "Increases Runic Power generation by 10%"
+    ],
+    "description": "Increases your Runic Power generation by 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201240": {
+    "benefits": [],
+    "description": "Every 3 sec while in combat, you hurl a flask of poison at a nearby random location, creating a pool of toxins that deals 205.65 Poison damage per second. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201241": {
+    "benefits": [],
+    "description": "Every 3 sec while in combat, you hurl a flask of poison at a nearby random location, creating a pool of toxins that deals 411.3 Poison damage per second. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201242": {
+    "benefits": [],
+    "description": "Every 3 sec while in combat, you hurl a flask of poison at a nearby random location, creating a pool of toxins that deals 2056.5 Poison damage per second. This effect deals at least 8 damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201244": {
+    "benefits": [],
+    "description": "Damage dealt by your damage-over-time effects has a chance to grant a random ally 1% maximum Mana, 8 Energy, 4 Rage, or 16 Runic Power.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201246": {
+    "benefits": [],
+    "description": "The resources you spend are stored. Every 5 sec, your next ability deals additional damage based on the amount stored.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201250": {
+    "benefits": [],
+    "description": "Your periodic effects have a 30% chance to flare, causing them to deal damage or healing an additional time. Cannot occur more than once every 2 sec on the same target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201254": {
+    "benefits": [],
+    "description": "Damage dealt by your damage-over-time effects has a chance to apply a random damage-over-time effect associated with another class.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201256": {
+    "benefits": [],
+    "description": "When a target dies while affected by one of your damage-over-time effects, that effect spreads to all enemies within 20 yards.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201258": {
+    "benefits": [],
+    "description": "When you fall below 35% health, you transform into a Demon for 8 sec. While transformed, your damage is increased by 30%, you leech 15% of damage dealt as health, and your melee attacks strike an additional nearby enemy. Cannot occur more than once every 45 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201262": {
+    "benefits": [],
+    "description": "Your damage-over-time effects now benefit from Haste.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201264": {
+    "benefits": [],
+    "description": "Your direct healing spells have a 10% chance to grant a random ally Inspired, a 3% bonus to all attributes for 15 sec. Stacks up to a total of 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201266": {
+    "benefits": [],
+    "description": "Your periodic healing effects have a 5% chance to grant a random ally Inspired, a 1% bonus to all attributes for 15 sec. Stacks up to a total of 10%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201268": {
+    "benefits": [],
+    "description": "Your healing done is increased by 30%, but your spells cost 500% more mana.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201270": {
+    "benefits": [],
+    "description": "You can equip all armor types.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201272": {
+    "benefits": [],
+    "description": "Allows you to dual wield. Off-hand damage is reduced by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201274": {
+    "benefits": [],
+    "description": "Allows you to wield two-handed weapons in one hand. Your damage is reduced by 20%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201276": {
+    "benefits": [],
+    "description": "Reduces your healing done by 25%. Absorbs up to 50% of damage taken, to a maximum of 2581 per hit.",
+    "downsides": [
+      "Reduces healing done by 25%"
+    ],
+    "explicit_tradeoff": false,
+    "has_downside": true,
+    "stats": []
+  },
+  "201278": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Shield Slam, Revenge, Thunder Clap, Mortal Strike, Bloodthirst, Whirlwind, Shockwave, Concussion Blow.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201280": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Avenger's Shield, Judgement, Consecration, Crusader Strike, Divine Storm, Exorcism, Hammer of Wrath, Shield of Righteousness, Hammer of the Righteous, Holy Shock, Holy Wrath.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201282": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Howling Blast, Blood Boil, Pestilence.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201284": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Arcane Shot, Aimed Shot, Chimera Shot, Explosive Shot, Multi-Shot, Kill Shot, Raptor Strike, Mongoose Bite, Black Arrow.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201286": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Earth Shock, Flame Shock, Frost Shock, Stormstrike, Lava Lash, Riptide.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201288": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Mangle (Bear), Mangle (Cat), Rake, Typhoon, Swiftmend, Wild Growth.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201290": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Ghostly Strike",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201292": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Arcane Barrage, Fire Blast, Dragon’s Breath, Cone of Cold, Living Bomb, Blast Wave, Deep Freeze.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201294": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Power Word: Shield, Shadow Word: Death, Prayer of Mending, Circle of Healing, Penance.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201296": {
+    "benefits": [],
+    "description": "Your cooldowns are now reduced by your Haste. Affected spells : Conflagrate, Shadowburn, Shadowflame, Shadowfury.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201298": {
+    "benefits": [],
+    "description": "Your global cooldown is now reduced by your Haste.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201300": {
+    "benefits": [],
+    "description": "Your damaging abilities build Impale on the target. At 8 stacks, you Skewer the target for 8 sec, dealing 3090 Physical damage every 1 sec. While Skewered is active, your attacks against the target have a 20% chance to splinter, dealing 4138 Physical damage to up to 5 nearby enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201304": {
+    "benefits": [],
+    "description": "Taking direct damage grants a stack of Molten Blood, up to 8. At 8 stacks, you shed your skin, leaving behind a Poisonous Slime for 10 sec that deals 5151 Nature damage every 1 sec to nearby enemies, while you gain 15% increased movement speed and 10% reduced damage taken for 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201308": {
+    "benefits": [
+      "Increases movement speed by 2%"
+    ],
+    "description": "Your critical strikes grant Momentum for 8 sec, stacking up to 10 times. Momentum cannot be gained more than once per second. Each stack increases your movement speed by 2% and damage dealt by 1%. At 10 stacks, you unleash a Massive Crash, dealing 25756 Physical damage to enemies within 10 yards of your target.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201312": {
+    "benefits": [],
+    "description": "Your damaging spells and abilities have a chance to open a Nether Portal for 10 sec. While active, the portal hurls Fel Lightning at your target every 2 sec, dealing 12878 Fel damage. Each strike has a 25% chance to summon a Fel Flamestrike under the target, dealing 20605 Fel damage and burning the ground for 4 sec, dealing 4123 Fel damage every 1 sec. You cannot summon a Nether Portal more than once every 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201318": {
+    "benefits": [],
+    "description": "Your direct healing spells grant Rally for 8 sec. At 10 stacks, you unleash Champion’s Rally, instantly healing your target for 4346 and granting them Rallying Cry for 6 sec, reducing damage taken by 15% and increasing healing received by 20%. While Rallying Cry is active, 30% of your direct healing on that target is also granted to the most injured nearby ally.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201324": {
+    "benefits": [],
+    "description": "You begin combat in Light Essence. Light Essence: Dealing Holy, Fire, or Nature damage applies Light Charge for 8 sec, stacking up to 20 times. Dealing Shadow, Frost, or Arcane damage consumes Light Charge to unleash Darkburst, dealing 1542 Shadow damage per stack to the target and all enemies within 8 yards and shifts you into Dark Essence. Dark Essence: Dealing Shadow, Frost, or Arcane damage applies Dark Charge for 8 sec, stacking up to 20 times. Dealing Holy, Fire, or Nature damage consumes Dark Charge to unleash Lightburst, dealing 1542 Holy damage per stack to the target and all enemies within 8 yards and shifts you into Light Essence.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201332": {
+    "benefits": [],
+    "description": "While below 50% health, your damaging spells and abilities unleash Leeching Swarm, dealing 3085 Nature damage every 1 sec to all enemies within 10 yds for 6 sec. You are healed for 30% of the damage dealt. If Leeching Swarm hits only 1 target, its damage and healing are increased by 100%. Leeching Swarm cannot occur more than once every 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201336": {
+    "benefits": [],
+    "description": "Your direct damage spells and abilities have a chance to apply Searing Cinders for 8 sec, dealing 1547 Fire damage every 1 sec. When Searing Cinders reaches 5 stacks, it triggers Deep Breath, burning all enemies in a line in front of you for 20615 Fire damage and consuming all stacks on the primary target. Deep Breath cannot occur more than once every 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201340": {
+    "benefits": [],
+    "description": "When you cast a spell or ability, you have a chance to unleash a Cyclone of Cold Bones for 6 sec, dealing 4143 Frost damage every 1 sec to enemies within 8 yards and leaving Coldflame in your wake. Coldflame deals 2057 Frost damage every 1 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201344": {
+    "benefits": [],
+    "description": "When damage would bring you below 50% health, you gain a Mana Barrier for 8 sec, absorbing damage equal to 30% of your maximum mana. If you have no mana, Mana Barrier instead absorbs damage equal to 15% of your maximum health. While active, Mana Barrier deals 4114 Shadow damage every 1 sec to nearby enemies. This effect cannot occur more than once every 30 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201348": {
+    "benefits": [],
+    "description": "While in combat, you periodically ready a Cannon Blast. Your next damaging spell or ability calls it down at the target location, dealing 10284 Fire damage to all enemies within 8 yards. Striking 3 or more enemies readies the next blast 4 sec sooner.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201354": {
+    "benefits": [],
+    "description": "Damaging an enemy below 35% health grants Scent of Blood for 3 sec, increasing your attack speed and casting speed by 15%.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201356": {
+    "benefits": [],
+    "description": "Every 6 sec while in combat, you inhale the surrounding blight and unleash Pungent Blight, dealing 6200 Shadow damage to all enemies within 12 yards and applying 3 stacks of Mutated Blight. Pungent Blight deals 5% increased damage per stack of Mutated Blight already on the target. Mutated Blight: Deals 774 Plague damage every 1 sec for 8 sec. Stacks up to 20 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201360": {
+    "benefits": [],
+    "description": "Your direct damage spells and abilities have a chance to afflict the target with Mutated Infection for 8 sec, dealing 3100 Nature damage every 1 sec and applying a stack of Mutated Blight every 2 sec. When Mutated Infection expires or the target dies, it leaves behind Sticky Ooze for 6 sec, dealing 3101 Nature damage every 2 sec to all enemies within 8 yards and applying a stack of Mutated Blight every 2 sec. Mutated Infection cannot occur more than once every 6 sec. Mutated Blight: Deals 774 Plague damage every 1 sec for 8 sec. Stacks up to 20 times.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201366": {
+    "benefits": [],
+    "description": "Your damaging spells and abilities have a chance to hurl Malleable Goo at the target location, dealing 20645 Nature damage to all enemies within 8 yards and afflicting them with Malleable for 6 sec. Malleable enemies are slowed by 30% and take 10% increased damage from Mutated Blight.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201370": {
+    "benefits": [],
+    "description": "When 6 or more enemies are within 10 yards of you, you create a Shock Vortex at your location for 8 sec. The vortex pulls nearby enemies toward its center, dealing 2067 Nature damage every 1 sec and slowing them by 50%. When it expires, Shock Vortex erupts, dealing 16517 Nature damage to all enemies within it. Shock Vortex cannot occur more than once every 12 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201378": {
+    "benefits": [],
+    "description": "When you take damage, you have a chance to summon a Dark Nucleus for 8 sec. The Dark Nucleus absorbs 20% of the damage you take, up to a maximum of 30% of your maximum health. When it expires or is fully consumed, Dark Nucleus hurls an Empowered Shadow Lance at your target, dealing Shadow damage equal to twice the amount absorbed.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201382": {
+    "benefits": [],
+    "description": "Killing a burning enemy conjures a Ball of Flame that seeks out a nearby enemy, leaving Burning Flames in its wake. Burning Flames deal 3095 Fire damage every 1 sec to nearby enemies for 6 sec. When the Ball of Flame reaches its target, it explodes, dealing 12903 Fire damage to all enemies within 8 yards. This effect cannot occur more than once every 2 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201388": {
+    "benefits": [],
+    "description": "Your damaging spells and abilities have a chance to bind your target to the nearest enemy for 8 sec. While bound, 30% of direct damage dealt to either target by you is also dealt to the other as Shadow damage. If either target dies while bound, the surviving target is afflicted with Vampiric Bite, increasing damage taken from you by 15% for 6 sec.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201394": {
+    "benefits": [],
+    "description": "Healing an ally below 50% health grants them Emerald Vigor for 8 sec, increasing healing received from you by 15%. If an ally with Emerald Vigor is healed above 90% health, Emerald Vigor blooms, healing up to 3 nearby injured allies for 3828.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201398": {
+    "benefits": [],
+    "description": "Your Frost damage has a chance to afflict the target with Permeating Chill for 6 sec, increasing Frost damage taken from you by 10%. If an enemy dies while afflicted, it shatters violently, dealing 10333 Frost damage to all enemies within 8 yards.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201402": {
+    "benefits": [],
+    "description": "Killing an enemy creates Defile at its location for 8 sec, dealing 4113 Shadow damage every 1 sec to enemies within it. Each enemy slain within Defile increases its radius by 1 yard, damage by 10%, and duration by 1 sec, up to 10 times. Only one Defile can be active at a time.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201406": {
+    "benefits": [],
+    "description": "Your damage-over-time effects have a chance to afflict the target with Necrotic Plague for 15 sec, dealing 6170 Plague damage every 1 sec. If a target afflicted by Necrotic Plague dies, it jumps to a nearby enemy, refreshing its duration and increasing its damage by 25%, up to 200%. Only one Necrotic Plague can be active at a time.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201410": {
+    "benefits": [
+      "Increases damage done by 2%"
+    ],
+    "description": "While in combat, you periodically mark a nearby enemy with Harvest Soul for 10 sec, prioritizing enemies with the lowest maximum health. If the marked enemy dies while afflicted, you devour its soul, granting Harvested Soul for 12 sec. Harvested Soul increases damage done by 2%, stacking up to 10 times. At 10 stacks, your damaging spells and abilities also release a burst of Shadowfrost damage around the target, dealing 5166 Shadowfrost damage.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201416": {
+    "benefits": [],
+    "description": "Dealing Physical damage to an enemy afflicted by one of your damage-over-time effects has a chance to summon a Warborn Reflection at its location. The reflection unleashes Blade Tempest for 8 sec, dealing 6200 Physical damage every 1 sec to nearby enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201420": {
+    "benefits": [],
+    "description": "Your Physical damage has a chance to expose the target's armor for 8 sec, increasing Physical damage taken from you by 10%. If the exposed target is within 8 yards of at least 2 other enemies, your Physical damage against the target cleaves nearby enemies for 20% of the damage dealt. Only one target can be exposed at a time.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201424": {
+    "benefits": [],
+    "description": "Your Fire damage has a chance to mark the target with Flame Beacon for 6 sec. While marked, the target releases a Conflagration every 1 sec, dealing 2067 Fire damage to nearby enemies. If the marked target dies, it erupts in a Fire Nova, dealing 10333 Fire damage to all enemies within 10 yards.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  },
+  "201428": {
+    "benefits": [],
+    "description": "Your Fire damage has a chance to afflict the target with Fiery Combustion for 8 sec, dealing 1033 Fire damage every 1 sec. Your Shadow damage has a chance to afflict the target with Soul Consumption for 8 sec, dealing 1033 Shadow damage every 1 sec. If both effects are active on the same target, they are consumed to create a Twilight Rift beneath it for 6 sec, dealing 6200 Shadowflame damage every 1 sec to nearby enemies.",
+    "downsides": [],
+    "explicit_tradeoff": false,
+    "has_downside": false,
+    "stats": []
+  }
+}

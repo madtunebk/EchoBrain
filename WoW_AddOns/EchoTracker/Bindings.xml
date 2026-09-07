@@ -1,0 +1,3 @@
+<Bindings>
+    <Binding name="ECHOTRACKER_WISHLIST_TOGGLE" runOnUp="true">EchoTracker_ToggleWishlistHovered();</Binding>
+</Bindings>

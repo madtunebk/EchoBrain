@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: Data Bridge
+## Notes: Exchanges data with the Rust wow_bridge proxy over addon whispers.
+## Version: 0.1.0
+## SavedVariables: DataBridgeDB
+
+DataBridge.lua

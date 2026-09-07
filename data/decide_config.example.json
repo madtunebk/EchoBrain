@@ -1,0 +1,11 @@
+{
+  "brackets": [
+    {"max_level": 21, "name": "LOCKED",   "reserve_pct": 100, "take_threshold": 999},
+    {"max_level": 49, "name": "SPARING",  "reserve_pct": 90,  "take_threshold": 55},
+    {"max_level": 70, "name": "MODERATE", "reserve_pct": 70,  "take_threshold": 45},
+    {"max_level": 80, "name": "OPEN",     "reserve_pct": 40,  "take_threshold": 35}
+  ],
+  "freeze_protect_fraction": 0.8,
+  "simultaneous_freeze_cap": 2,
+  "junk_score_cutoff": 15.0
+}
