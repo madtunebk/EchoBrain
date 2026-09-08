@@ -1267,6 +1267,36 @@ local function InstallNativePickerHook()
     return true
 end
 
+-- Reports the single unambiguous "a run actually ended" moment: both
+-- normal and Hardcore death both funnel through this exact same function
+-- (confirmed against the server addon's own source) regardless of WHY it
+-- fired - out of free revives, declined to pay Soul Ashes, or a deliberate
+-- hardcore self-destruct. Deliberately NOT inferred from hardmode_tier
+-- dropping - that's also changed by HardmodeService.SetDifficulty() from a
+-- plain "Change Difficulty" menu with zero death involved, which would
+-- have made a tier-based signal fire on a voluntary difficulty switch too.
+-- Persisted (EchoTrackerDB.runResetCount) rather than reset to 0 each
+-- reload, since companion treats any CHANGE in this counter as "a new run
+-- started" - restarting from 0 after every /reload would misfire on the
+-- next reload itself, not just a real reset.
+local runResetHookInstalled = false
+
+local function InstallRunResetHook()
+    local service = ProjectEbonhold and ProjectEbonhold.PlayerRunService
+    if runResetHookInstalled or not service or type(service.AcceptDeath) ~= "function" then
+        return runResetHookInstalled
+    end
+    local original = service.AcceptDeath
+    service.AcceptDeath = function(...)
+        EchoTrackerDB = EchoTrackerDB or {}
+        EchoTrackerDB.runResetCount = (EchoTrackerDB.runResetCount or 0) + 1
+        ReportToBridge("echo_run_reset", tostring(EchoTrackerDB.runResetCount))
+        return original(...)
+    end
+    runResetHookInstalled = true
+    return true
+end
+
 local function SetNativePickerEnabled(enabled)
     EchoTrackerDB = EchoTrackerDB or {}
     EchoTrackerDB.nativePickerEnabled = enabled and true or false
@@ -1452,6 +1482,13 @@ nativeHookFrame:SetScript("OnUpdate", function(self)
     end
 end)
 
+local runResetHookFrame = CreateFrame("Frame")
+runResetHookFrame:SetScript("OnUpdate", function(self)
+    if InstallRunResetHook() then
+        self:SetScript("OnUpdate", nil)
+    end
+end)
+
 --------------------------------------------------------------------------
 -- Packing helpers (compact strings for the DataBridge wire)
 --------------------------------------------------------------------------
@@ -1545,6 +1582,14 @@ end
 -- nice-to-have. A brand new chunked key (same pattern as echo_owned)
 -- sidesteps this entirely: FlaskGUI is the only consumer, and companion
 -- never reads it at all.
+--
+-- Board choices are NOT covered here anymore (2026-09-08) - name/icon are
+-- both fixed per spellId (never vary with stacks/context), so the one-time
+-- EchoTracker_ExportIcons() catalog-wide dump (below) plus
+-- data/perk_display.json already covers every board card FlaskGUI will ever
+-- show. This only still exists at all as a safety net for the ~6 locked
+-- slots, in case a spellId is ever missing from that static export (e.g. a
+-- catalog entry added after the last export run).
 local iconKeyCache = {}
 local nameCache = {}
 
@@ -1572,17 +1617,15 @@ local function SpellDisplayInfo(spellId)
     return key, name
 end
 
--- Only the spellIds actually visible right now (current board + locked
--- slots, at most 3 + 6 = 9) - small enough to never need more than a couple
--- chunks even with long icon-key strings, and doesn't need to cover every
--- owned echo ever seen (FlaskGUI only renders board/locked, not the full
--- owned list). Field order is "id:iconkey:name" - name is last and NOT
--- length-limited or sanitized against ":" the way the id/iconkey fields are,
--- since echo names are simple text (no colons/semicolons observed in the
--- catalog), but is still last specifically so a stray ":" in some future
--- name can never shift the fixed-position id/iconkey fields - only a
--- greedy split on the FIRST two colons should ever be used to parse this.
-local function PackIcons(choices, locked)
+-- Only the LOCKED spellIds actually visible right now (at most 6) - see the
+-- "board choices are NOT covered here anymore" note above. Field order is
+-- "id:iconkey:name" - name is last and NOT length-limited or sanitized
+-- against ":" the way the id/iconkey fields are, since echo names are
+-- simple text (no colons/semicolons observed in the catalog), but is still
+-- last specifically so a stray ":" in some future name can never shift the
+-- fixed-position id/iconkey fields - only a greedy split on the FIRST two
+-- colons should ever be used to parse this.
+local function PackIcons(locked)
     local parts, seen = {}, {}
     local function addSpell(spellId)
         if not spellId or seen[spellId] then
@@ -1592,11 +1635,6 @@ local function PackIcons(choices, locked)
         local key, name = SpellDisplayInfo(spellId)
         if key and key ~= "" then
             table.insert(parts, (spellId - SPELL_ID_BASE) .. ":" .. key .. ":" .. (name or ""))
-        end
-    end
-    if choices then
-        for _, c in ipairs(choices) do
-            addSpell(c.spellId)
         end
     end
     if locked then
@@ -1618,6 +1656,17 @@ end
 -- proved out below for this exact problem (own locals, not the same
 -- variables, since those are defined later in the file and this only needs
 -- the same byte values, not the same binding).
+--
+-- Board choices are NOT covered here anymore (2026-09-08) - a board card's
+-- description is always computed at stacks=1
+-- (utils.GetSpellDescription(spellId, _, 1), see DescriptionOf/PackTips
+-- below), which is exactly what the one-time
+-- EchoTracker_ExportDescriptions() catalog-wide dump already captured into
+-- data/perk_descriptions.json - sending it again live on every board
+-- refresh was pure duplicate traffic. Locked echoes are different: their
+-- description genuinely depends on the live stack count
+-- (utils.GetSpellDescription(spellId, _, entry.stack)), which the static
+-- export can't know in advance, so those (at most 6) still export live.
 local TIP_ID_SEP = string.char(31)   -- ASCII Unit Separator - never appears in real game text
 local TIP_PART_SEP = string.char(30) -- ASCII Record Separator - joins id/desc records within a chunk
 
@@ -1642,7 +1691,7 @@ local function DescriptionOf(spellId, stacks)
     return desc
 end
 
-local function PackTips(choices, locked)
+local function PackTips(locked)
     local parts, seen = {}, {}
     local function addSpell(spellId, stacks)
         if not spellId or seen[spellId] then
@@ -1652,11 +1701,6 @@ local function PackTips(choices, locked)
         local desc = DescriptionOf(spellId, stacks)
         if desc ~= "" then
             table.insert(parts, (spellId - SPELL_ID_BASE) .. TIP_ID_SEP .. desc)
-        end
-    end
-    if choices then
-        for _, c in ipairs(choices) do
-            addSpell(c.spellId, 1)
         end
     end
     if locked then
@@ -1886,8 +1930,8 @@ local function Refresh()
     local maxLockSlots = PE.PerkService.GetMaximumPermanentEchoes and PE.PerkService.GetMaximumPermanentEchoes() or 0
     SendChanged("echo_locked_max", maxLockSlots)
     UpdateWishSlots(granted, locked)
-    SendChunked("echo_icons", PackIcons(choices, locked))
-    SendChunked("echo_tips", PackTips(choices, locked), TIP_PART_SEP)
+    SendChunked("echo_icons", PackIcons(locked))
+    SendChunked("echo_tips", PackTips(locked), TIP_PART_SEP)
 
     local charges = PE.PlayerRunService and PE.PlayerRunService.GetCurrentData
         and PE.PlayerRunService.GetCurrentData()
@@ -2131,8 +2175,50 @@ function EchoTracker_ExportDescriptions()
     -- exportState/EXPORT_QUEUE_HEADROOM above, drained one per OnUpdate
     -- tick by the main OnUpdate handler below.
     ReportToBridge("echo_desc_count", #chunks)
-    exportState = {chunks = chunks, nextIndex = 1}
+    exportState = {chunks = chunks, nextIndex = 1, keyPrefix = "echo_desc_", label = "description"}
     print("|cffffcc00EchoTracker:|r exporting " .. #parts .. " descriptions across " .. #chunks .. " chunk(s), draining in background...")
+end
+
+-- One-time export: every catalog echo's icon key + display name, the same
+-- catalog-wide sweep as EchoTracker_ExportDescriptions above, feeding
+-- data/perk_display.json (tools/export/export_perk_icons.py) instead of
+-- data/perk_descriptions.json. Board choices' icon/name never vary with
+-- context (unlike description text, which can depend on stack count for
+-- locked echoes) so this one static file, re-run only when the catalog
+-- itself changes, is all FlaskGUI needs for board+locked icon/name display -
+-- see PackIcons's own comment on why echo_icons_N now only covers the ~6
+-- locked slots live.
+function EchoTracker_ExportIcons()
+    local PE = _G.ProjectEbonhold
+    if not (PE and PE.PerkDatabase) then
+        print("|cffffcc00EchoTracker:|r ProjectEbonhold.PerkDatabase not available")
+        return
+    end
+    if type(DataBridge_QueueLength) ~= "function" then
+        print("|cffffcc00EchoTracker:|r DataBridge is out of date (no DataBridge_QueueLength) - redeploy it before exporting, or the queue cap will silently drop chunks")
+        return
+    end
+    if exportState then
+        print("|cffffcc00EchoTracker:|r export already in progress (" .. (exportState.nextIndex - 1) .. "/" .. #exportState.chunks .. "), not restarting")
+        return
+    end
+
+    local parts = {}
+    for spellId in pairs(PE.PerkDatabase) do
+        local name, _, icon = GetSpellInfo(spellId)
+        local key = ""
+        if icon then
+            local base = tostring(icon):match("([^\\/]+)$") or tostring(icon)
+            base = base:gsub("%.%a+$", "")
+            key = base:lower():gsub("[^%w_]", "")
+        end
+        table.insert(parts, spellId .. EXPORT_ID_SEP .. key .. EXPORT_ID_SEP .. (name or ""))
+    end
+
+    local chunks = BuildChunks(parts, EXPORT_PART_SEP)
+    ReportToBridge("echo_icon_count", #chunks)
+    exportState = {chunks = chunks, nextIndex = 1, keyPrefix = "echo_icon_", label = "icon"}
+    print("|cffffcc00EchoTracker:|r exporting " .. #parts .. " icons across " .. #chunks .. " chunk(s), draining in background...")
 end
 
 -- Callable from outside via /api/cmd/lua ("EchoTracker_ForceRefresh()") to
@@ -2205,10 +2291,10 @@ frame:SetScript("OnUpdate", function(self, elapsed)
     if exportState and DataBridge_QueueLength() < EXPORT_QUEUE_HEADROOM then
         local i = exportState.nextIndex
         if i <= #exportState.chunks then
-            ReportToBridge("echo_desc_" .. i, exportState.chunks[i])
+            ReportToBridge(exportState.keyPrefix .. i, exportState.chunks[i])
             exportState.nextIndex = i + 1
         else
-            print("|cffffcc00EchoTracker:|r description export complete (" .. #exportState.chunks .. " chunk(s))")
+            print("|cffffcc00EchoTracker:|r " .. exportState.label .. " export complete (" .. #exportState.chunks .. " chunk(s))")
             exportState = nil
         end
     end

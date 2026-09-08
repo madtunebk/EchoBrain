@@ -36,6 +36,9 @@ RECONNECT_BACKOFF_S = 2.0
 # regardless of which directory this app is launched from.
 SESSION_DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "session.db")
 DESCRIPTIONS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "perk_descriptions.json")
+# {spellId: {"icon": ..., "name": ...}} for the whole catalog - built once via
+# tools/export/export_perk_icons.py, same idea as DESCRIPTIONS_PATH above.
+ICONS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "perk_display.json")
 ICON_CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "icons")
 ICON_REMOTE_BASE = "https://wow.zamimg.com/images/wow/icons/large"
 ICON_MISS_TTL_S = 24 * 60 * 60
@@ -225,6 +228,20 @@ def descriptions():
     """
     try:
         with open(DESCRIPTIONS_PATH, encoding="utf-8") as source:
+            return jsonify(json.load(source))
+    except (OSError, ValueError) as exc:
+        return jsonify({"error": str(exc)}), 500
+
+
+@app.get("/api/perk_icons")
+def perk_icons():
+    """Static {spellId: {icon, name}} for the whole catalog, exported from
+    the game once (see ICONS_PATH's own comment). Live echo_icons_* remains a
+    fallback for the handful of currently-locked slots, in case a spellId is
+    ever missing here (e.g. a catalog entry added after the last export).
+    """
+    try:
+        with open(ICONS_PATH, encoding="utf-8") as source:
             return jsonify(json.load(source))
     except (OSError, ValueError) as exc:
         return jsonify({"error": str(exc)}), 500
@@ -666,16 +683,19 @@ $('wlWhitelistList').addEventListener('click',e=>{
   if(btn)wlPost('/api/wl/remove',{id:Number(btn.dataset.wlRemove)});
 });
 // echo_icons_N/_count: a separate chunked key (EchoTracker.lua's PackIcons/
-// SendChunked) carrying spellId:iconkey:name triples for whatever's on the
-// board or locked right now - kept deliberately OUT of echo_board/
-// echo_locked's own fields (those feed companion's live decide/auto loop
-// and are already near DataBridge_Send's byte cap; icon keys/names are just
-// for this page). Split on the first TWO colons only, greedily keeping
-// everything after as the name - a name is never assumed colon-free.
-// Chunks are not an atomic snapshot: EchoTracker deliberately sends at most
-// four changed keys per refresh, so a new board can temporarily expose a mix
-// of old and new icon chunks. Keep every resolved spell asset by ID instead
-// of making a transient missing chunk erase an icon we already loaded.
+// SendChunked) carrying spellId:iconkey:name triples - kept deliberately OUT
+// of echo_board/echo_locked's own fields (those feed companion's live
+// decide/auto loop and are already near DataBridge_Send's byte cap; icon
+// keys/names are just for this page). Split on the first TWO colons only,
+// greedily keeping everything after as the name - a name is never assumed
+// colon-free. This only ever covers the handful of currently-locked slots
+// (board icon/name never varies with context, so it's covered entirely by
+// the static /api/perk_icons fetch below instead - see PackIcons's own
+// comment on the addon side). Chunks are not an atomic snapshot: EchoTracker
+// deliberately sends at most four changed keys per refresh, so a lock-state
+// change can temporarily expose a mix of old and new icon chunks. Keep
+// every resolved spell asset by ID instead of making a transient missing
+// chunk erase an icon we already loaded.
 const ICON_STORAGE_KEY='echotracker.knownIcons.v1';
 const knownIcons={};
 try{Object.assign(knownIcons,JSON.parse(localStorage.getItem(ICON_STORAGE_KEY)||'{}'))}catch(_e){}
@@ -684,7 +704,8 @@ function persistKnownIcons(){
   if(iconSaveTimer)return;
   iconSaveTimer=setTimeout(()=>{iconSaveTimer=0;try{localStorage.setItem(ICON_STORAGE_KEY,JSON.stringify(knownIcons))}catch(_e){}},500);
 }
-function echoIconMap(d){let n=Number(d.echo_icons_count||0),changed=false;for(let i=1;i<=n;i++){let chunk=d['echo_icons_'+i];if(!chunk)continue;chunk.split(';').filter(Boolean).forEach(p=>{let a=p.indexOf(':');if(a<0)return;let b=p.indexOf(':',a+1);if(b<0)return;let id=Number(p.slice(0,a))+ECHO_SPELL_BASE,next={icon:p.slice(a+1,b),name:p.slice(b+1)},old=knownIcons[id];if(!old||old.icon!==next.icon||old.name!==next.name){knownIcons[id]=next;changed=true}})}if(changed){persistKnownIcons();if(selectedSessionId!==null&&!historyAssetTimer){historyAssetTimer=setTimeout(()=>{historyAssetTimer=0;if($('historyTab').classList.contains('active'))loadDecisions(selectedSessionId)},600)}}return knownIcons}
+const catalogIcons={};
+function echoIconMap(d){let n=Number(d.echo_icons_count||0),changed=false;for(let i=1;i<=n;i++){let chunk=d['echo_icons_'+i];if(!chunk)continue;chunk.split(';').filter(Boolean).forEach(p=>{let a=p.indexOf(':');if(a<0)return;let b=p.indexOf(':',a+1);if(b<0)return;let id=Number(p.slice(0,a))+ECHO_SPELL_BASE,next={icon:p.slice(a+1,b),name:p.slice(b+1)},old=knownIcons[id];if(!old||old.icon!==next.icon||old.name!==next.name){knownIcons[id]=next;changed=true}})}if(changed){persistKnownIcons();if(selectedSessionId!==null&&!historyAssetTimer){historyAssetTimer=setTimeout(()=>{historyAssetTimer=0;if($('historyTab').classList.contains('active'))loadDecisions(selectedSessionId)},600)}}return Object.assign({},knownIcons,catalogIcons)}
 const failedIcons=new Set();
 function iconURL(key){return key&&!failedIcons.has(key)?`/api/icon/${encodeURIComponent(key)}`:''}
 function iconFailed(img){
@@ -697,7 +718,12 @@ function iconFailed(img){
 // can contain literal ":" or ";" (e.g. "Increases X by 10%; also reduces
 // Y"), which would silently corrupt naive colon/semicolon splitting the
 // moment one did. Same trick this addon already uses for its full-catalog
-// description export.
+// description export. This only ever covers the handful of currently-locked
+// slots - board tips are always computed at stacks=1, which is exactly what
+// the static /api/descriptions catalog already has, so sending it live
+// again for board choices was pure duplicate traffic. Locked echoes
+// genuinely need this live path since their description depends on the
+// actual stack count, which the static export can't know.
 const TIP_ID_SEP=String.fromCharCode(31), TIP_PART_SEP=String.fromCharCode(30);
 const knownTips={};
 const catalogTips={};
@@ -860,6 +886,16 @@ fetch('/api/descriptions').then(r=>r.ok?r.json():Promise.reject(r.status)).then(
   if(latestSnapshot)scheduleRender(latestSnapshot);
   if(selectedSessionId!==null)loadDecisions(selectedSessionId);
 }).catch(err=>console.warn('full descriptions unavailable; using live previews',err));
+// Static icon/name catalog, same "fetch once, take priority over live" deal
+// as descriptions above - covers board cards, which no longer report
+// echo_icons_* live at all (see PackIcons's own comment on the addon side).
+fetch('/api/perk_icons').then(r=>r.ok?r.json():Promise.reject(r.status)).then(rows=>{
+  if(!rows||typeof rows!=='object'||rows.error)return;
+  Object.assign(catalogIcons,rows);
+  boardSig='';lockedSig='';
+  if(latestSnapshot)scheduleRender(latestSnapshot);
+  if(selectedSessionId!==null)loadDecisions(selectedSessionId);
+}).catch(err=>console.warn('full icon catalog unavailable; using live-seen icons only',err));
 // Session history - a separate on-demand fetch (not part of the live
 // telemetry stream, since it's a database read, not a wow_bridge key) with
 // its own light periodic refresh. Sessions change rarely (only on a level
@@ -886,7 +922,7 @@ function historyRowHTML(s){
 const QUALITY_COLOR={Common:Q[0],Uncommon:Q[1],Rare:Q[2],Epic:Q[3],Legendary:Q[4]};
 let historySig='',selectedSessionId=null,decisionRequest=0;
 function decisionCardHTML(c,target){
-  let asset=knownIcons[c.spell_id]||{},name=c.name||asset.name||('Echo #'+c.spell_id),desc=catalogTips[c.spell_id]||knownTips[c.spell_id]||'';
+  let asset=catalogIcons[c.spell_id]||knownIcons[c.spell_id]||{},name=c.name||asset.name||('Echo #'+c.spell_id),desc=catalogTips[c.spell_id]||knownTips[c.spell_id]||'';
   let icon=asset.icon&&iconURL(asset.icon)?`<img src="${iconURL(asset.icon)}" alt="" onerror="iconFailed(this)">`:`#${esc(c.spell_id)}`;
   if(c.error)return `<div class="dcard" data-tip-name="${esc(name)}" data-tip-sub="Catalog miss" data-tip-desc="${esc(desc)}" data-tip-id="${esc(c.spell_id)}"><div class="dicon">${icon}</div><div class="dinfo"><b>${esc(name)}</b><small><span>catalog miss</span></small></div></div>`;
   let score=c.score||{},qc=QUALITY_COLOR[c.quality]||'#7e91aa';
