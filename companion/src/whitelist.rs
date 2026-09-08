@@ -44,12 +44,14 @@ pub struct EquippedItem {
     /// "P" (whitelisted), "A" (auto-protected custom item), or "U"
     /// (unprotected - what FlagUnequippedItem would actually alarm on).
     pub tag: String,
-    pub name: String,
 }
 
 /// Records joined by `;`, fields within a record joined by `FIELD_SEP`:
-/// `slot<FS>id<FS>tag<FS>name`. Empty input means no equipped-item data has
-/// been pushed yet, not zero equipped items.
+/// `slot<FS>id<FS>tag`. Empty input means no equipped-item data has been
+/// pushed yet, not zero equipped items. No name field - item names are
+/// server-generated procedural text that can't be pre-baked into a static
+/// file, so they're resolved separately through item_cache.rs instead of
+/// sent over the wire (see WhitelistLiquidator.lua's own comment on this).
 pub fn parse_equipped(raw: &str) -> Vec<EquippedItem> {
     if raw.is_empty() {
         return Vec::new();
@@ -61,31 +63,18 @@ pub fn parse_equipped(raw: &str) -> Vec<EquippedItem> {
                 slot: parts.next()?.parse().ok()?,
                 id: parts.next()?.to_string(),
                 tag: parts.next()?.to_string(),
-                name: parts.next().unwrap_or("").to_string(),
             })
         })
         .collect()
 }
 
-pub struct WhitelistEntry {
-    pub id: String,
-    pub name: String,
-}
-
-/// Records joined by `;`, fields `id<FS>name`.
-pub fn parse_whitelist(raw: &str) -> Vec<WhitelistEntry> {
+/// A bare item ID, `;`-joined - see parse_equipped's doc comment for why
+/// there's no name here either.
+pub fn parse_whitelist(raw: &str) -> Vec<String> {
     if raw.is_empty() {
         return Vec::new();
     }
-    raw.split(';')
-        .filter_map(|rec| {
-            let mut parts = rec.split(FIELD_SEP);
-            Some(WhitelistEntry {
-                id: parts.next()?.to_string(),
-                name: parts.next().unwrap_or("").to_string(),
-            })
-        })
-        .collect()
+    raw.split(';').map(str::to_string).collect()
 }
 
 pub struct UnequipAlert {

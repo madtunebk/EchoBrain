@@ -21,6 +21,7 @@ mod board;
 mod bridge;
 mod catalog;
 mod decide;
+mod item_cache;
 mod scoring;
 mod session_db;
 mod whitelist;
@@ -47,6 +48,7 @@ fn main() -> ExitCode {
         Some("score") => score(&args[2..]),
         Some("auto") => auto(&args[2..]),
         Some("profile") => profile(&args[2..]),
+        Some("session") => session_cmd(&args[2..]),
         Some("wl") => wl_cmd(&args[2..]),
         _ => {
             print_usage();
@@ -82,6 +84,8 @@ fn print_usage() {
     eprintln!("                                                  continuously collect/score; --auto 1 executes actions, --auto 0 is advisor-only");
     eprintln!("  profile set-role <tank|dps|heal> [--api URL]    persist the scoring role for the current character GUID");
     eprintln!("  profile status [--api URL]                      show the detected current profile and saved role");
+    eprintln!("  session end                                     manually close whatever session is currently open (sets ended_at now)");
+    eprintln!("  session status                                   show whatever session is currently open, if any");
     eprintln!("  wl status [--api URL]                           WhitelistLiquidator: whitelist/protected/sell/destroy counts");
     eprintln!("  wl equipped [--api URL]                         list tracked equip slots and their protection status");
     eprintln!("  wl whitelist [--api URL]                        list whitelisted item IDs/names");
@@ -259,6 +263,74 @@ fn profile(args: &[String]) -> ExitCode {
         }
         _ => {
             eprintln!("usage: companion profile <set-role ROLE|status> [--api URL]");
+            ExitCode::FAILURE
+        }
+    }
+}
+
+/// NEW - no Python equivalent existed. Pure local `data/session.db`
+/// operation, no bridge/game involved at all - `SessionTracker::ensure`
+/// already closes a session automatically on a character switch, a level
+/// drop, or an `echo_run_reset` signal, but none of those fire just because
+/// you stopped playing for the day. `session end` is that missing manual
+/// "I'm done for now", so the last session of a play session doesn't sit
+/// with `ended_at = NULL` (looking permanently "still live" in FlaskGUI's
+/// history) until something else eventually closes it.
+fn session_cmd(args: &[String]) -> ExitCode {
+    let Some(command) = args.first().map(String::as_str) else {
+        eprintln!("usage: companion session <end|status>");
+        return ExitCode::FAILURE;
+    };
+    if args.len() > 1 {
+        eprintln!("unknown argument: {}", args[1]);
+        return ExitCode::FAILURE;
+    }
+
+    let conn = match session_db::open(&data_path("session.db")) {
+        Ok(c) => c,
+        Err(e) => {
+            eprintln!("error opening session DB: {e}");
+            return ExitCode::FAILURE;
+        }
+    };
+
+    match command {
+        "status" => match session_db::current_open_session(&conn) {
+            Ok(Some((id, name, started_at))) => {
+                let minutes = (session_db::now() - started_at) / 60.0;
+                println!(
+                    "session #{id} ({}) open for {:.0}m",
+                    name.as_deref().unwrap_or("unassigned"),
+                    minutes
+                );
+                ExitCode::SUCCESS
+            }
+            Ok(None) => {
+                println!("no session currently open");
+                ExitCode::SUCCESS
+            }
+            Err(e) => {
+                eprintln!("error: {e}");
+                ExitCode::FAILURE
+            }
+        },
+        "end" => match session_db::end_current_session(&conn) {
+            Ok(Some(id)) => {
+                println!("closed session #{id}");
+                ExitCode::SUCCESS
+            }
+            Ok(None) => {
+                println!("no session currently open - nothing to close");
+                ExitCode::SUCCESS
+            }
+            Err(e) => {
+                eprintln!("error: {e}");
+                ExitCode::FAILURE
+            }
+        },
+        other => {
+            eprintln!("unknown argument: {other}");
+            eprintln!("usage: companion session <end|status>");
             ExitCode::FAILURE
         }
     }
@@ -1244,12 +1316,20 @@ fn wl_cmd(args: &[String]) -> ExitCode {
                 println!("no equipped-item data yet");
                 return ExitCode::SUCCESS;
             }
+            let cache = match item_cache::open(&data_path("cache/items.sqlite3")) {
+                Ok(c) => c,
+                Err(e) => {
+                    eprintln!("error opening item cache: {e}");
+                    return ExitCode::FAILURE;
+                }
+            };
             for item in items {
+                let name = wl_resolve_name(&bridge, &cache, &item.id);
                 println!(
                     "slot {:>2}  [{}]  {} ({})",
                     item.slot,
                     whitelist::tag_label(&item.tag),
-                    item.name,
+                    name,
                     item.id
                 );
             }
@@ -1257,13 +1337,21 @@ fn wl_cmd(args: &[String]) -> ExitCode {
         }
         Some("whitelist") => {
             let raw = bridge.get_chunked("wl_whitelist");
-            let entries = whitelist::parse_whitelist(&raw);
-            if entries.is_empty() {
+            let ids = whitelist::parse_whitelist(&raw);
+            if ids.is_empty() {
                 println!("whitelist is empty");
                 return ExitCode::SUCCESS;
             }
-            for e in entries {
-                println!("{}  [{}]", e.name, e.id);
+            let cache = match item_cache::open(&data_path("cache/items.sqlite3")) {
+                Ok(c) => c,
+                Err(e) => {
+                    eprintln!("error opening item cache: {e}");
+                    return ExitCode::FAILURE;
+                }
+            };
+            for id in ids {
+                let name = wl_resolve_name(&bridge, &cache, &id);
+                println!("{name}  [{id}]");
             }
             ExitCode::SUCCESS
         }
@@ -1324,5 +1412,18 @@ fn wl_run_remote(bridge: &WowBridge, lua: &str, label: &str) -> ExitCode {
             eprintln!("error: {e}");
             ExitCode::FAILURE
         }
+    }
+}
+
+/// Cache hit is instant; a miss blocks up to 3s for one live
+/// WhitelistLiquidatorRemote.ResolveItem round-trip (see item_cache.rs) -
+/// acceptable for a one-shot CLI read, never done from the `auto` loop.
+fn wl_resolve_name(bridge: &WowBridge, cache: &rusqlite::Connection, id: &str) -> String {
+    let Ok(id) = id.parse::<i64>() else {
+        return format!("Item #{id}");
+    };
+    match item_cache::resolve_blocking(bridge, cache, id, std::time::Duration::from_secs(3)) {
+        Ok(Some(item)) => item.name,
+        _ => format!("Item #{id}"),
     }
 }

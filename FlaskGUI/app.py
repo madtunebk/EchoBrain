@@ -39,6 +39,11 @@ DESCRIPTIONS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..
 # {spellId: {"icon": ..., "name": ...}} for the whole catalog - built once via
 # tools/export/export_perk_icons.py, same idea as DESCRIPTIONS_PATH above.
 ICONS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "perk_display.json")
+# companion/src/item_cache.rs's cache - arbitrary (procedurally named) item
+# names WhitelistLiquidator's wl_equipped/wl_whitelist no longer send over
+# the wire (see that file's own comments). companion populates this file in
+# the background; this dashboard only ever reads it.
+ITEM_CACHE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "cache", "items.sqlite3")
 ICON_CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "icons")
 ICON_REMOTE_BASE = "https://wow.zamimg.com/images/wow/icons/large"
 ICON_MISS_TTL_S = 24 * 60 * 60
@@ -244,6 +249,27 @@ def perk_icons():
         with open(ICONS_PATH, encoding="utf-8") as source:
             return jsonify(json.load(source))
     except (OSError, ValueError) as exc:
+        return jsonify({"error": str(exc)}), 500
+
+
+@app.get("/api/wl/item_names")
+def wl_item_names():
+    """{item_id: name} for every item companion's item_cache.rs has resolved
+    so far - see ITEM_CACHE_PATH's own comment. Small (a whitelist's worth
+    of items, not thousands), so the whole thing is returned at once rather
+    than one lookup per id; an id missing here just means companion hasn't
+    resolved it yet (it will, in the background, next time it's seen).
+    """
+    if not os.path.exists(ITEM_CACHE_PATH):
+        return jsonify({})
+    try:
+        conn = sqlite3.connect(f"file:{ITEM_CACHE_PATH}?mode=ro", uri=True)
+        try:
+            rows = conn.execute("SELECT id, name FROM items").fetchall()
+            return jsonify({str(item_id): name for item_id, name in rows})
+        finally:
+            conn.close()
+    except sqlite3.Error as exc:
         return jsonify({"error": str(exc)}), 500
 
 
@@ -609,8 +635,10 @@ function renderBudget(d){
 }
 // WhitelistLiquidator's wl_* exports (WoW_AddOns/WhitelistLiquidator/
 // WhitelistLiquidator.lua) - same record(";")/field(unit separator 0x1f)
-// convention as echo_tips above, chosen there for the same reason: item
-// names are free text that can contain ":" or ";".
+// convention as echo_tips above. Still used by wl_equipped (slot/id/tag)
+// and wl_unequip_alert (id/name/slot - that one's a single record, no
+// bandwidth concern, so it still carries a name directly); wl_whitelist is
+// now just bare ids with no field separator at all, see loadWlItemNames.
 const WL_FS=String.fromCharCode(31);
 const WL_TAG_LABEL={P:'protected',A:'auto',U:'UNPROTECTED'};
 function wlParseStatus(raw){
@@ -632,6 +660,27 @@ function chunked(d,baseKey){
   for(let i=1;i<=n;i++){let c=d[baseKey+'_'+i];if(c)parts.push(c)}
   return parts.join(';');
 }
+// Item names no longer travel over the wire at all (wl_equipped/
+// wl_whitelist send bare ids now - see WhitelistLiquidator.lua's own
+// comments on why: procedurally-generated per-server text can't be
+// pre-baked into a static file the way echo names can). companion resolves
+// them in the background into data/cache/items.sqlite3; this just reads
+// that cache via /api/wl/item_names. Refreshed periodically since the
+// cache fills in slowly, one item at a time - a name arriving after the
+// initial render still needs to update the already-drawn rows.
+let wlItemNames={};
+function wlItemName(id){return wlItemNames[id]||('Item #'+id)}
+function loadWlItemNames(){
+  fetch('/api/wl/item_names').then(r=>r.ok?r.json():{}).then(names=>{
+    if(!names||typeof names!=='object'||names.error)return;
+    wlItemNames=names;
+    wlEquippedSig='';wlWhitelistSig=''; // force a redraw with any newly-resolved names
+    if(latestSnapshot)scheduleRender(latestSnapshot);
+  }).catch(()=>{});
+}
+loadWlItemNames();
+setInterval(loadWlItemNames,10000);
+
 let wlEquippedSig='',wlWhitelistSig='';
 function renderWatchdog(d){
   let s=wlParseStatus(d.wl_status||'');
@@ -645,17 +694,17 @@ function renderWatchdog(d){
   if(equippedRaw!==wlEquippedSig){
     wlEquippedSig=equippedRaw;
     let rows=wlParseRecords(equippedRaw);
-    $('wlEquippedList').innerHTML=rows.length?rows.map(([slot,id,tag,name])=>
-      `<div class="wlrow"><span>${esc(name||('Item '+id))}</span><span class="wltag ${esc(tag)}">${esc(WL_TAG_LABEL[tag]||tag)}</span></div>`
+    $('wlEquippedList').innerHTML=rows.length?rows.map(([slot,id,tag])=>
+      `<div class="wlrow"><span>${esc(wlItemName(id))}</span><span class="wltag ${esc(tag)}">${esc(WL_TAG_LABEL[tag]||tag)}</span></div>`
     ).join(''):'<div class="empty">No equipped-item data yet.</div>';
   }
 
   let whitelistRaw=chunked(d,'wl_whitelist');
   if(whitelistRaw!==wlWhitelistSig){
     wlWhitelistSig=whitelistRaw;
-    let rows=wlParseRecords(whitelistRaw);
-    $('wlWhitelistList').innerHTML=rows.length?rows.map(([id,name])=>
-      `<div class="wlrow"><span>${esc(name||('Item '+id))} <span style="color:var(--muted)">[${esc(id)}]</span></span><button data-wl-remove="${esc(id)}">Remove</button></div>`
+    let ids=whitelistRaw?whitelistRaw.split(';').filter(Boolean):[];
+    $('wlWhitelistList').innerHTML=ids.length?ids.map(id=>
+      `<div class="wlrow"><span>${esc(wlItemName(id))} <span style="color:var(--muted)">[${esc(id)}]</span></span><button data-wl-remove="${esc(id)}">Remove</button></div>`
     ).join(''):'<div class="empty">Whitelist is empty.</div>';
   }
 
@@ -688,14 +737,14 @@ $('wlWhitelistList').addEventListener('click',e=>{
 // decide/auto loop and are already near DataBridge_Send's byte cap; icon
 // keys/names are just for this page). Split on the first TWO colons only,
 // greedily keeping everything after as the name - a name is never assumed
-// colon-free. This only ever covers the handful of currently-locked slots
-// (board icon/name never varies with context, so it's covered entirely by
-// the static /api/perk_icons fetch below instead - see PackIcons's own
-// comment on the addon side). Chunks are not an atomic snapshot: EchoTracker
-// deliberately sends at most four changed keys per refresh, so a lock-state
-// change can temporarily expose a mix of old and new icon chunks. Keep
-// every resolved spell asset by ID instead of making a transient missing
-// chunk erase an icon we already loaded.
+// colon-free. As of 2026-09-08 this only ever covers the handful of
+// currently-locked slots (board icon/name never varies with context, so
+// it's covered entirely by the static /api/perk_icons fetch below instead -
+// see PackIcons's own comment on the addon side). Chunks are not an atomic
+// snapshot: EchoTracker deliberately sends at most four changed keys per
+// refresh, so a lock-state change can temporarily expose a mix of old and
+// new icon chunks. Keep every resolved spell asset by ID instead of making
+// a transient missing chunk erase an icon we already loaded.
 const ICON_STORAGE_KEY='echotracker.knownIcons.v1';
 const knownIcons={};
 try{Object.assign(knownIcons,JSON.parse(localStorage.getItem(ICON_STORAGE_KEY)||'{}'))}catch(_e){}
@@ -718,12 +767,12 @@ function iconFailed(img){
 // can contain literal ":" or ";" (e.g. "Increases X by 10%; also reduces
 // Y"), which would silently corrupt naive colon/semicolon splitting the
 // moment one did. Same trick this addon already uses for its full-catalog
-// description export. This only ever covers the handful of currently-locked
-// slots - board tips are always computed at stacks=1, which is exactly what
-// the static /api/descriptions catalog already has, so sending it live
-// again for board choices was pure duplicate traffic. Locked echoes
-// genuinely need this live path since their description depends on the
-// actual stack count, which the static export can't know.
+// description export. As of 2026-09-08 this only ever covers the handful of
+// currently-locked slots - board tips are always computed at stacks=1,
+// which is exactly what the static /api/descriptions catalog already has,
+// so sending it live again for board choices was pure duplicate traffic.
+// Locked echoes genuinely need this live path since their description
+// depends on the actual stack count, which the static export can't know.
 const TIP_ID_SEP=String.fromCharCode(31), TIP_PART_SEP=String.fromCharCode(30);
 const knownTips={};
 const catalogTips={};

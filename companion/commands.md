@@ -77,16 +77,23 @@ companion wl <status|equipped|whitelist|alert|protect|dismiss|clean> [--api URL]
 companion wl add <item_id> [--api URL]
 companion wl remove <item_id> [--api URL]
 ```
-Controls for the WhitelistLiquidator addon's gear-protection watchdog (not
-part of this release - see its own repo/folder). `status` shows whitelist/
-protected/sell/destroy counts; `equipped` lists every tracked equip slot and
-its protection tag; `whitelist` lists whitelisted item IDs/names; `alert`
-shows the current in-game unequip warning if one is pending; `protect`/
-`dismiss` act on that warning remotely; `add`/`remove` edit the whitelist by
-item ID; `clean` runs `Clean()` (a merchant must be open in-game). All of
-these read/write the same `wl_*` bridge keys the addon pushes via
-`DataBridge_SendLarge` - if WhitelistLiquidator isn't installed, they just
-return empty/no-op.
+Controls for the WhitelistLiquidator addon's gear-protection watchdog.
+`status` shows whitelist/protected/sell/destroy counts; `equipped` lists
+every tracked equip slot and its protection tag; `whitelist` lists
+whitelisted item IDs/names; `alert` shows the current in-game unequip
+warning if one is pending; `protect`/`dismiss` act on that warning remotely;
+`add`/`remove` edit the whitelist by item ID; `clean` runs `Clean()` (a
+merchant must be open in-game). All of these read/write the same `wl_*`
+bridge keys the addon pushes via `DataBridge_SendLarge` - if
+WhitelistLiquidator isn't installed, they just return empty/no-op.
+
+`wl_equipped`/`wl_whitelist` carry item IDs only, never names - item names
+are procedurally-generated per-server text that can't be pre-baked into a
+static file. `equipped`/`whitelist` resolve names from
+`data/cache/items.sqlite3` (`src/item_cache.rs`), blocking up to 3s on a
+cache miss for one live `WhitelistLiquidatorRemote.ResolveItem` round-trip.
+`companion auto` also fills this cache in the background on its own, one
+item every ~5s, so a name is usually already cached by the time you check.
 
 ```
 companion lua <file.lua> [--api URL]

@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: Simple Damage Meter
+## Notes: Personal DPS/damage tracker. Reports through DataBridge if it's loaded.
+## Version: 0.1.0
+## SavedVariables: SimpleDamageMeterDB
+## OptionalDeps: DataBridge
+
+SimpleDamageMeter.lua

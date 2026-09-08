@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: |cff66ccffCall Board Helper|r
+## Notes: Auto-detects and selects wanted objectives on the Objectives board (whitelist managed entirely via the Quest Browser, minimap toggle + Settings); rerolls with a randomized delay and a gold-safe cap when none of the 3 offered are wanted.
+## Author: Cornea Valentin
+## Version: 1.7.1
+## OptionalDeps: ProjectEbonhold
+## SavedVariables: CallBoardHelperDB
+
+core.lua

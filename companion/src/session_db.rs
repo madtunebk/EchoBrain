@@ -186,7 +186,7 @@ const MIGRATION_COLUMNS: &[(&str, &str)] = &[
     ("profile_source", "TEXT"),
 ];
 
-fn now() -> f64 {
+pub(crate) fn now() -> f64 {
     SystemTime::now()
         .duration_since(UNIX_EPOCH)
         .unwrap()
@@ -400,11 +400,27 @@ pub fn session_max_level(conn: &Connection, session_id: i64) -> Result<Option<i6
 
 /// Tracks the active session across calls, reattaching to the most recent
 /// still-open session on first use and closing+starting a new one if level
-/// ever drops (a reset). Call `ensure()` once per cycle, before recording
-/// anything.
+/// ever drops, OR the `echo_run_reset` counter ever changes. Call
+/// `ensure()` once per cycle, before recording anything.
+///
+/// `echo_run_reset` (EchoTracker.lua's `InstallRunResetHook`) increments
+/// exactly once per real `ProjectEbonhold.PlayerRunService.AcceptDeath()`
+/// call - confirmed against the server addon's own source to be the one
+/// thing both normal and Hardcore death funnel through, regardless of
+/// whether it was triggered by running out of free revives, declining to
+/// pay Soul Ashes, or a deliberate self-destruct. Deliberately NOT inferred
+/// from `hardmode_tier` dropping: that's also changed by
+/// `HardmodeService.SetDifficulty()` from a plain "Change Difficulty" menu
+/// with zero death involved, which would have made a tier-based signal
+/// misfire on a voluntary difficulty switch. Getting this right matters
+/// beyond just tidy history: aimodel trains on
+/// `ln(1 + mean linked fight DPS)` per confirmed decision, and mixing two
+/// very different power levels into one nominal "session" corrupts that
+/// signal for every decision in it, not just the ones near the reset.
 pub struct SessionTracker {
     current_session_id: Option<i64>,
     last_level: Option<i64>,
+    last_reset_signal: Option<i64>,
     current_guid: Option<String>,
 }
 
@@ -413,6 +429,7 @@ impl SessionTracker {
         Self {
             current_session_id: None,
             last_level: None,
+            last_reset_signal: None,
             current_guid: None,
         }
     }
@@ -421,6 +438,7 @@ impl SessionTracker {
         &mut self,
         conn: &Connection,
         level: i64,
+        reset_signal: Option<i64>,
         profile: &CharacterProfile,
     ) -> Result<i64> {
         let seen_at = now();
@@ -442,6 +460,7 @@ impl SessionTracker {
                 println!("[session_db] character changed: closed session {old_id}");
             }
             self.last_level = None;
+            self.last_reset_signal = None;
             self.current_guid = Some(profile.guid.clone());
         }
         if self.current_session_id.is_none() {
@@ -457,15 +476,24 @@ impl SessionTracker {
                 Some(id) => {
                     self.current_session_id = Some(id);
                     // Seed from the DB's real last-known level for that
-                    // session, not the live level passed in here - a reset
-                    // that happened while no process was running must
+                    // session, not the live value passed in here - a level
+                    // reset that happened while no process was running must
                     // still be caught on this very call, not silently
-                    // merged into the old session forever.
+                    // merged into the old session forever. echo_run_reset
+                    // has no equivalent stored history to seed from (it's
+                    // not tracked per-decision anywhere), so a reset that
+                    // happens in the narrow window between companion runs
+                    // can be missed - trusting the live value as the
+                    // baseline is the best available without a schema
+                    // change, and the common case (companion running
+                    // continuously through a play session) is unaffected.
                     self.last_level = Some(session_max_level(conn, id)?.unwrap_or(level));
+                    self.last_reset_signal = reset_signal;
                 }
                 None => {
                     self.current_session_id = Some(start_session(conn, profile)?);
                     self.last_level = Some(level);
+                    self.last_reset_signal = reset_signal;
                 }
             }
             let id = self.current_session_id.unwrap();
@@ -478,21 +506,65 @@ impl SessionTracker {
         }
 
         let session_id = self.current_session_id.unwrap();
-        if let Some(last) = self.last_level {
-            if level < last {
-                conn.execute(
-                    "UPDATE sessions SET ended_at = ?1 WHERE id = ?2",
-                    params![now(), session_id],
-                )?;
+        let level_dropped = self.last_level.is_some_and(|last| level < last);
+        let reset_fired = matches!(
+            (self.last_reset_signal, reset_signal),
+            (Some(last), Some(current)) if current != last
+        );
+        if level_dropped || reset_fired {
+            conn.execute(
+                "UPDATE sessions SET ended_at = ?1 WHERE id = ?2",
+                params![now(), session_id],
+            )?;
+            if level_dropped {
                 println!(
-                    "[session_db] level dropped {last} -> {level}: closed session {session_id}"
+                    "[session_db] level dropped {} -> {level}: closed session {session_id}",
+                    self.last_level.unwrap()
                 );
-                self.current_session_id = Some(start_session(conn, profile)?);
             }
+            if reset_fired {
+                println!(
+                    "[session_db] echo_run_reset fired ({} -> {}): closed session {session_id}",
+                    self.last_reset_signal.unwrap(),
+                    reset_signal.unwrap()
+                );
+            }
+            self.current_session_id = Some(start_session(conn, profile)?);
+        }
+        if let Some(r) = reset_signal {
+            self.last_reset_signal = Some(r);
         }
         self.last_level = Some(level);
         Ok(self.current_session_id.unwrap())
     }
+}
+
+/// The most recently started still-open session, if any -
+/// (id, character_name, started_at). For `companion session status`.
+pub fn current_open_session(conn: &Connection) -> Result<Option<(i64, Option<String>, f64)>> {
+    Ok(conn
+        .query_row(
+            "SELECT id, character_name, started_at FROM sessions WHERE ended_at IS NULL ORDER BY id DESC LIMIT 1",
+            [],
+            |row| Ok((row.get(0)?, row.get(1)?, row.get(2)?)),
+        )
+        .optional()?)
+}
+
+/// Closes the most recently started still-open session (sets
+/// `ended_at = now`). Returns its id, or None if nothing was open. For
+/// `companion session end` - a manual "I'm done for now" that doesn't wait
+/// for a level drop, `echo_run_reset`, or character switch to close it
+/// naturally (see SessionTracker::ensure for those automatic triggers).
+pub fn end_current_session(conn: &Connection) -> Result<Option<i64>> {
+    let Some((id, _, _)) = current_open_session(conn)? else {
+        return Ok(None);
+    };
+    conn.execute(
+        "UPDATE sessions SET ended_at = ?1 WHERE id = ?2",
+        params![now(), id],
+    )?;
+    Ok(Some(id))
 }
 
 /// Latest-observed-value overwrite for reroll/freeze totals (echo_charges
@@ -956,8 +1028,8 @@ mod tests {
             role: "dps".into(),
         };
         let mut tracker = SessionTracker::new();
-        let paladin_session = tracker.ensure(&conn, 79, &paladin)?;
-        let mage_session = tracker.ensure(&conn, 10, &mage)?;
+        let paladin_session = tracker.ensure(&conn, 79, None, &paladin)?;
+        let mage_session = tracker.ensure(&conn, 10, None, &mage)?;
         assert_ne!(paladin_session, mage_session);
         let paladin_ended: Option<f64> = conn.query_row(
             "SELECT ended_at FROM sessions WHERE id=?1",

@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: Whitelist Liquidator
+## Notes: Whitelist items; everything else gets sold or destroyed with confirmation (floor configurable via /wl confirmquality). Custom server items (ID 70000+) are fully auto-ignored.
+## Author: Coaba
+## Version: 3.1
+## OptionalDeps: DataBridge
+## SavedVariables: WhitelistLiquidatorDB
+
+WhitelistLiquidator.lua

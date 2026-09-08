@@ -7,8 +7,10 @@ use crate::board::{self, Charges};
 use crate::bridge::{WowBridge, LUA_CMD_BUDGET};
 use crate::catalog::{Catalog, CommunityDb, StatEffects};
 use crate::decide::{self, Action, Decision};
+use crate::item_cache;
 use crate::scoring;
 use crate::session_db::{self, CharacterProfile, SessionTracker};
+use crate::whitelist;
 use regex::Regex;
 use rusqlite::Connection;
 use std::collections::HashMap;
@@ -323,6 +325,12 @@ struct State {
     /// pattern and doing something ELSE can. See MAX_STUCK_RETRIES.
     stuck_signature: Option<(String, String, Option<String>)>,
     stuck_retries: i64,
+    /// Slowly (one at a time, never blocking this loop) fills item_cache.rs
+    /// from whatever item IDs wl_equipped/wl_whitelist currently mention -
+    /// (item id, when the lookup was sent). None means no lookup is
+    /// currently in flight. See ITEM_RESOLVE_INTERVAL_S/resolve_item_cache.
+    pending_item_resolve: Option<(i64, Instant)>,
+    item_resolve_elapsed: f64,
 }
 
 // How many consecutive identical-action timeouts on the same board before
@@ -333,6 +341,18 @@ struct State {
 // that a genuinely stuck client flag doesn't stall play indefinitely (the
 // observed live failure looped forever with no bound at all).
 const MAX_STUCK_RETRIES: i64 = 3;
+
+// item_cache.rs background population: checked at most this often (not
+// every POLL_INTERVAL tick) since wl_equipped/wl_whitelist rarely change
+// and each check costs a couple of bridge round-trips - no reason to pay
+// that every 1.5s. One item resolved per tick is plenty; the whole point is
+// this happens quietly in the background, not that it happens fast.
+const ITEM_RESOLVE_INTERVAL_S: f64 = 5.0;
+// How long a single in-flight ResolveItem request gets before this gives up
+// and tries a fresh one (possibly for a different id) instead of getting
+// stuck forever on one lookup the client can't answer (e.g. GetItemInfo
+// still returning nil for it).
+const ITEM_RESOLVE_TIMEOUT_S: f64 = 6.0;
 
 /// A full 1->80 leveling run offers roughly one board per level, so ~79
 /// TAKEs is the typical total for a complete run - used only to give the
@@ -416,6 +436,7 @@ impl State {
         community_db: &CommunityDb,
         stat_effects: &StatEffects,
         ai_ensemble: Option<&ai::Ensemble>,
+        item_cache_conn: &Connection,
     ) -> anyhow::Result<()> {
         if bridge
             .get("bridge_world_connected")
@@ -433,6 +454,7 @@ impl State {
         {
             return Ok(());
         }
+        self.resolve_item_cache(bridge, item_cache_conn)?;
         let profile =
             read_profile(bridge)?.ok_or_else(|| anyhow::anyhow!("player profile not ready"))?;
         if profile.guid != self.profile.guid {
@@ -508,7 +530,17 @@ impl State {
             .map_err(anyhow::Error::msg)?
             .and_then(|s| s.parse().ok())
             .unwrap_or(1);
-        let session_id = self.tracker.ensure(conn, level, &self.profile)?;
+        // EchoTracker.lua's InstallRunResetHook - increments exactly once
+        // per real ProjectEbonhold.PlayerRunService.AcceptDeath() call, the
+        // one thing both normal and Hardcore death funnel through
+        // regardless of why (out of free revives, declined to pay Soul
+        // Ashes, deliberate self-destruct). See SessionTracker::ensure's
+        // doc comment for why this is used instead of a hardmode_tier drop.
+        let reset_signal: Option<i64> = bridge
+            .get("echo_run_reset")
+            .map_err(anyhow::Error::msg)?
+            .and_then(|s| s.parse().ok());
+        let session_id = self.tracker.ensure(conn, level, reset_signal, &self.profile)?;
         if self.snapshot_session_id != Some(session_id) {
             self.snapshot_session_id = Some(session_id);
             self.latest_build_signature = None;
@@ -1028,6 +1060,69 @@ impl State {
 
         Ok(())
     }
+
+    /// Fills item_cache.rs from whatever item IDs wl_equipped/wl_whitelist
+    /// currently mention, one at a time, checked at most every
+    /// ITEM_RESOLVE_INTERVAL_S - see those constants' own comments for why.
+    /// Never blocks: fires a ResolveItem request and checks for its answer
+    /// on a LATER call instead of waiting here, so a slow/unanswered lookup
+    /// can never stall board scoring or decisions.
+    fn resolve_item_cache(
+        &mut self,
+        bridge: &WowBridge,
+        item_cache_conn: &Connection,
+    ) -> anyhow::Result<()> {
+        self.item_resolve_elapsed += POLL_INTERVAL;
+        if self.item_resolve_elapsed < ITEM_RESOLVE_INTERVAL_S {
+            return Ok(());
+        }
+        self.item_resolve_elapsed = 0.0;
+
+        if let Some((pending_id, sent_at)) = self.pending_item_resolve {
+            if let Ok(Some(raw)) = bridge.get("wl_item_resolved") {
+                if let Some((resolved_id, item)) = item_cache::parse_resolved(&raw) {
+                    if resolved_id == pending_id {
+                        item_cache::set(
+                            item_cache_conn,
+                            resolved_id,
+                            &item.name,
+                            item.quality,
+                            item.texture.as_deref(),
+                        )?;
+                        self.pending_item_resolve = None;
+                    }
+                }
+            }
+            if self.pending_item_resolve.is_some()
+                && sent_at.elapsed().as_secs_f64() > ITEM_RESOLVE_TIMEOUT_S
+            {
+                // Gave up waiting - try again (possibly a different id, if
+                // this one keeps not resolving) next tick.
+                self.pending_item_resolve = None;
+            }
+            return Ok(());
+        }
+
+        let equipped_raw = bridge.get_chunked("wl_equipped");
+        let whitelist_raw = bridge.get_chunked("wl_whitelist");
+        let candidate_ids = whitelist::parse_equipped(&equipped_raw)
+            .into_iter()
+            .map(|item| item.id)
+            .chain(whitelist::parse_whitelist(&whitelist_raw));
+        for id_str in candidate_ids {
+            let Ok(id) = id_str.parse::<i64>() else {
+                continue;
+            };
+            if item_cache::get(item_cache_conn, id)?.is_none() {
+                bridge
+                    .run_lua(&format!("WhitelistLiquidatorRemote.ResolveItem({id})"))
+                    .map_err(anyhow::Error::msg)?;
+                self.pending_item_resolve = Some((id, Instant::now()));
+                break;
+            }
+        }
+        Ok(())
+    }
 }
 
 pub(crate) fn read_profile(bridge: &WowBridge) -> anyhow::Result<Option<CharacterProfile>> {
@@ -1081,6 +1176,7 @@ pub fn run(args: AutoArgs) -> anyhow::Result<()> {
     let decide_config = decide::load_config(Path::new("data/decide_config.json"));
     let bridge = WowBridge::new(&args.api);
     let conn = session_db::open(Path::new("data/session.db"))?;
+    let item_cache_conn = item_cache::open(Path::new("data/cache/items.sqlite3"))?;
 
     println!("[autopilot] waiting for PLAYER_ENTERING_WORLD and character profile...");
     let mut waiting_role_guid: Option<String> = None;
@@ -1159,6 +1255,8 @@ pub fn run(args: AutoArgs) -> anyhow::Result<()> {
         boards_taken: 0,
         stuck_signature: None,
         stuck_retries: 0,
+        pending_item_resolve: None,
+        item_resolve_elapsed: 0.0,
         last_fight_raw: None,
         last_suggested_spell: None,
         last_suggested_action: None,
@@ -1187,6 +1285,7 @@ pub fn run(args: AutoArgs) -> anyhow::Result<()> {
             &community_db,
             &stat_effects,
             ai_ensemble.as_ref(),
+            &item_cache_conn,
         ) {
             println!("[autopilot] ERROR this cycle, will retry: {e:?}");
         }

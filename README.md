@@ -102,6 +102,37 @@ Both are enabled from the in-game AddOns list at the character-select
 screen, same as any other addon. EchoTracker declares `DataBridge` as an
 optional dependency in its `.toc`, so load order takes care of itself.
 
+### Bonus addons
+
+Three smaller, fully optional addons from the same project, each usable on
+its own (none of them require EchoTracker/DataBridge/companion to function,
+though WhitelistLiquidator and SimpleDamageMeter get extra features when
+DataBridge is also loaded):
+
+```
+Interface/AddOns/CallBoardHelper/     <- WoW_AddOns/CallBoardHelper/*
+Interface/AddOns/WhitelistLiquidator/ <- WoW_AddOns/WhitelistLiquidator/*
+Interface/AddOns/SimpleDamageMeter/   <- WoW_AddOns/SimpleDamageMeter/*
+```
+
+- **CallBoardHelper** - auto-detects and selects wanted objectives on
+  Project Ebonhold's Objectives board (whitelist managed via the in-game
+  Quest Browser, minimap toggle + Settings panel); rerolls with a randomized
+  delay and a gold-safe cap when none of the 3 offered are wanted. Fully
+  standalone, no optional dependency at all.
+- **WhitelistLiquidator** - a bag-management watchdog: whitelist items you
+  want to keep, everything else gets sold or destroyed with confirmation
+  (floor configurable via `/wl confirmquality`); custom server items
+  (ID 70000+) are auto-ignored. Warns loudly if a whitelisted/protected item
+  somehow ends up unequipped. Reports through DataBridge if it's loaded,
+  which is what makes `companion`'s `wl` subcommand and FlaskGUI's "Gear
+  Watchdog" card work (see [Full command reference](#full-command-reference));
+  fully usable on its own without either.
+- **SimpleDamageMeter** - a personal DPS/damage tracker. Reports through
+  DataBridge if it's loaded (`companion` records it as `dps_last_fight`,
+  visible in FlaskGUI and the training database); fully usable on its own
+  without DataBridge too.
+
 ## Building
 
 `wow_bridge`, `companion`, and `aimodel` are three independent Cargo
@@ -210,6 +241,12 @@ than only the static output:
   running bridge process (see [How they fit together](#how-they-fit-together)):
   it triggers EchoTracker's own in-game description export and reads the
   results back over the bridge API.
+- `export_perk_icons.py` - same live-session requirement as the description
+  export above, same idea: triggers EchoTracker's in-game icon/name export
+  and writes `perk_display.json`. Together with `perk_descriptions.json`
+  this is why board cards need zero live per-refresh traffic for their
+  name/icon/tooltip text - only the ~6 currently-locked slots still report
+  those live (their tooltip text depends on stack count).
 - `export_build_report.py` - reads `data/session.db` (a real `companion`
   training-data database - not included, it's per-player gameplay history)
   and writes a human-readable build report.
@@ -230,10 +267,6 @@ EchoTracker/DataBridge slash command.
 
 ## What's *not* in this release
 
-- **WhitelistLiquidator** - `companion`'s `wl` subcommand and the
-  `wl_*` bridge keys it reads exist for a separate bag-management addon
-  that isn't part of this release. Those commands simply return empty/no-op
-  without it; everything else in `companion` is unaffected.
 - **`ProjectEbonhold/modules/perks/perks_data.lua`** - `export_perk_catalog.py`
   reads this directly from a live server install; it's the server's own
   datapack file, not something this repo can ship a copy of.

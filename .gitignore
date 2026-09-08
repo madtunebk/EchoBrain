@@ -9,4 +9,5 @@ __pycache__/
 data/session.db
 data/session.db-journal
 data/*.bak*
+data/cache/
 bins/
