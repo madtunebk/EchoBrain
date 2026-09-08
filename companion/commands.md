@@ -20,14 +20,15 @@ Live switch between pure heuristic scoring ("normal", the default) and
 heuristic scoring blended with a trained ensemble's prediction ("ai" - see
 `src/ai.rs`/`src/scoring.rs`'s `AiContext`/`AI_WEIGHT`). The ensemble itself
 lives under `data/ai_ensemble/member_1/`, `member_2/`, etc. (each a
-`metadata.json` + `model.safetensors` pair) - a pre-trained PALADIN/dps one
-ships with this release; train your own or extend it to another class/spec
-with `aimodel` (also included - see `aimodel/README.md`). Without an
-ensemble present, `ai` mode silently behaves exactly like "normal" -
-`score_card()` never fails or errors over a missing ensemble.
-`auto` reads this every cycle, same as `echo-auto` - no restart needed
-either way. Also settable once at `auto` startup via `--score-mode
-<normal|ai>`.
+`metadata.json` + `model.safetensors` pair) - a trained PALADIN/dps one is
+already there; train your own or extend it to another class/spec with
+`aimodel` (see `aimodel/README.md`). Without an ensemble present, `ai` mode
+silently behaves exactly like "normal" - `score_card()` never fails or
+errors over a missing ensemble. `auto` reads this every cycle, same as
+`echo-auto` - no restart needed either way. Only ever actually blends in the
+AI signal for the exact class/spec an ensemble was trained on; every other
+class/spec silently scores as pure "normal" regardless of this setting.
+Also settable once at `auto` startup via `--score-mode <normal|ai>`.
 
 ```
 companion board [--api URL]
@@ -71,6 +72,19 @@ below), just reachable from the CLI - calls `SlashCmdList.ECHONATIVE(...)`
 through the same `/api/cmd/lua` transport every other command here uses.
 `status` prints its result in the game's chat frame, not the terminal - the
 addon's own `print()` call, not something this command captures.
+
+```
+companion session <end|status> [--api URL]
+```
+Pure local `data/session.db` operation - no bridge/game connection needed at
+all, `--api` is accepted but unused. `SessionTracker::ensure` already closes
+a session automatically on a character switch, a level drop, or an
+`echo_run_reset` signal (see `autopilot.rs`), but none of those fire just
+because you stopped playing for the day - `session end` is that missing
+manual "I'm done for now", so the last session doesn't sit with
+`ended_at = NULL` (looking permanently "still live" in FlaskGUI's history)
+until something else eventually closes it. `session status` prints the
+currently-open session's id/character/elapsed minutes, or says none is open.
 
 ```
 companion wl <status|equipped|whitelist|alert|protect|dismiss|clean> [--api URL]

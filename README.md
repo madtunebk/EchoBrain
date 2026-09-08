@@ -262,8 +262,8 @@ resolution) and, where needed, `sdk/python/echo_session_db.py` /
 See **[`companion/commands.md`](companion/commands.md)** for every `companion`
 subcommand (manual one-shot actions, the `auto` watch-and-execute loop,
 character-profile/role handling, the `score-mode`/AI-assisted-scoring
-toggle, the WhitelistLiquidator-only `wl` commands) and every in-game
-EchoTracker/DataBridge slash command.
+toggle, `session end`/`session status`, the WhitelistLiquidator-backed `wl`
+commands) and every in-game EchoTracker/DataBridge slash command.
 
 ## What's *not* in this release
 
